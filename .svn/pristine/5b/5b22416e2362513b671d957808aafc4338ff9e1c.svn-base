@@ -1,0 +1,214 @@
+table {
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+    table.container {
+        border: solid 1px #000;
+    }
+
+.border {
+    border: solid 1px #000;
+}
+
+.rightborder {
+    border-right: solid 1px #000;
+}
+
+.bottomborder {
+    border-bottom: solid 1px #000;
+}
+
+.topborder {
+    border-top: solid 1px #000;
+}
+
+.borderless {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    border: none 0px #000;
+}
+
+table td {
+    padding: 0px;
+    border: 0px;
+}
+
+body, td {
+}
+
+.kitdata {
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.kitcategory {
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: right;
+}
+
+.kittype {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+
+.kitsection {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #666666;
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.itemNumber {
+    color: #CC0000;
+    font-weight: bold;
+    cursor: default;
+}
+
+.sizeCode {
+    color: #996666;
+    font-weight: bold;
+}
+
+.note {
+    color: #663333;
+}
+
+.erroralert {
+    color: #CC0000;
+}
+
+.joinqualifier {
+    color: #000099;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sizelabels {
+    background-color: #CECECE;
+    text-align: right;
+    /*text-size: 7px;*/
+    border-right: solid 1px black;
+}
+
+#tdCrankKits {
+    width: 100%;
+}
+
+div.FulfillmentMessage {
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFFFAA;
+    border: solid 1px #666666;
+    width: 75%;
+}
+
+div.kitContainer {
+    height: 625px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+span.ProcessingAlert {
+    background-color: #FFFFAA;
+    padding: 4px;
+    border: solid 1px #666666;
+}
+
+span.Unavailable {
+    background-color: Red;
+    padding: 4px;
+    border: solid 1px #666666;
+}
+
+span.PartDescription {
+    padding-left: 5px;
+}
+
+span.PartCheckbox {
+    padding-top: 5px;
+}
+
+span.ShipWarehouse {
+    color: #990099;
+}
+
+input.unavailable {
+    /*background-color:Red;*/
+}
+
+span.group_1, span.group_12 {
+    background-color: #FF0000;
+}
+
+span.group_2, span.group_13 {
+    background-color: #FFE600;
+}
+
+span.group_3, span.group_14 {
+    background-color: #6CFF00;
+}
+
+span.group_4, span.group_15 {
+    background-color: #0063FF;
+}
+
+span.group_5, span.group_16 {
+    background-color: #F800FA;
+}
+
+span.group_6, span.group_17 {
+    background-color: #00FCFD;
+}
+
+span.group_7, span.group_18 {
+    background-color: #CCFF00;
+}
+
+span.group_8, span.group_19 {
+    background-color: #9A00FF;
+}
+
+span.group_9, span.group_20 {
+    background-color: #FF5E00;
+}
+
+
+span.group_10, span.group_20 {
+    background-color: #00FFCE;
+}
+
+
+span.group_11, span.group_21 {
+    background-color: #6CFF00;
+}
+
+img.Substitute, img.Revert {
+    cursor: pointer;
+}
+
+span.increase {
+    color: Red;
+}
+
+span.decrease {
+    color: Green;
+}

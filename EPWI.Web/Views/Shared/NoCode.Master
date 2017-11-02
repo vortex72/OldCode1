@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:Literal ID="Literal1" runat="server" Text="Engine Performance Warehouse - "/>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server"/>
+    </title>
+    <!--[if IE 6]>
+        <link rel="stylesheet" href="<% = Url.Content("~/Content/imagesie6.css") %>" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-migrate-1.2.1.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/superfish_supersubs.js") %>" type="text/javascript"></script>
+
+    <%: Styles.Render("~/Content/themes/base/jquery-ui") %>
+    <%: Styles.RenderFormat(BundlesFormat.All, "~/Content/css/epwi") %>
+    <%: Styles.RenderFormat(BundlesFormat.Print, "~/Content/css/print") %>
+    <%: Styles.RenderFormat(BundlesFormat.Screen, "~/Content/css/screen") %>
+    <%: Scripts.Render("~/bundles/modernizr") %>
+    <%: Scripts.Render("~/bundles/jquery") %>
+    <%--<%: Scripts.Render("~/bundles/jquery-ui") %>--%>
+    <%: Scripts.Render("~/bundles/jqueryval") %>
+    
+    <asp:ContentPlaceHolder runat="server" ID="bundle">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="backgroundOverlay">
+    <div class="mainWrapper">
+        <div class="mainColumn">
+            <% Html.RenderPartial("IE6Warning"); %>
+            <div class="mainContainer" id="header">
+                <img src="<% = Url.Content("~/Content/images/header.gif") %>" width="750" height="120" border="0"/>
+            </div>
+            <div id="main" class="mainContainer roundedCorners">
+                <div class="upperRightCorner"></div>
+                <div class="roundedCornersBody">
+                    <div class="mainContainerContent">
+                        <div id="content">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="roundedCornersFooter">
+                    <% Html.RenderPartial("Footer"); %>
+                </div>
+            </div>
+        </div> <!-- end main column -->
+        <div class="sideColumnWrapper">
+            <div class="sideColumn">
+            </div>
+        </div>
+    </div>
+    <% Html.RenderPartial("FooterCDN"); %>
+    <% Html.RenderPartial("GoogleAnalytics"); %>
+</div>
+</body>
+</html>

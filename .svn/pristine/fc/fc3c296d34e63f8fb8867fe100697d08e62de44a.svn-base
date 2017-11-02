@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataComparison>
+  <Version>10</Version>
+  <ConnectionProperties1>
+    <ConnectionString>Data Source=epwi.database.windows.net;Initial Catalog=epwi.dev;Persist Security Info=True;User ID=epwi-admin;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False</ConnectionString>
+    <FullDisplayName>epwi.database.windows.net.epwi.dev (epwi-admin)</FullDisplayName>
+  </ConnectionProperties1>
+  <ConnectionProperties2>
+    <ConnectionString>Data Source=epwi.database.windows.net;Initial Catalog=epwi.prod;Persist Security Info=True;User ID=epwi-admin;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False</ConnectionString>
+    <FullDisplayName>epwi.database.windows.net.epwi.prod (epwi-admin)</FullDisplayName>
+  </ConnectionProperties2>
+  <SessionSettings>IncludeDifferentRecords</SessionSettings>
+</DataComparison>

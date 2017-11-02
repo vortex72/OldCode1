@@ -1,0 +1,52 @@
+﻿body {
+    background: none;
+    background-color: #FFFFFF;
+}
+
+div.sideColumn {
+    display: none;
+}
+
+/* For some reason this is required to force correct font-sizing when e-mailing/faxing the html of invoices */
+table {
+    font-size: 1.2em;
+}
+
+div.mainColumn {
+    float: none;
+    width: 100%;
+}
+
+div.roundedCornersFooter {
+    display: none;
+}
+
+th {
+    font-size: 10pt;
+}
+
+.invdetail {
+    font-size: 12pt;
+}
+
+div#header {
+    display: none;
+}
+
+div.roundedCorners, div.roundedCorners div.upperRightCorner, div.roundedCorners h2.roundedCorners, div.roundedCornersBody, div.roundedCornersFooter, div.roundedCornersFooter p {
+    background: none;
+}
+
+div.mainContainer {
+    float: none;
+    margin-right: 0px;
+    width: 100%;
+}
+
+div.mainContainerContent {
+    background: none;
+}
+
+#backgroundOverlay {
+    background: none;
+}

@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DynamicData.master.cs" Inherits="EPWI.Web.Views.Shared.DynamicData" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- <link href="~/Content/epwi.css" rel="stylesheet" media="all" type="text/css" /> -->
+    <link href="~/Content/DynamicData.css" rel="stylesheet" media="all" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+       
+    </asp:ContentPlaceHolder>
+</head>
+<body class="template">
+    <h1><span class="allcaps">Table Maintenance</span></h1>
+    <div class="back">
+        <a id="A1" runat="server" href="~/Admin/TableMaintenance"><img id="Img1" alt="Back to table list" runat="server" src="~/DynamicData/Content/Images/back.gif" />Back to table list</a>
+    </div>
+    <form id="form1" runat="server">
+             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        
+    <div>
+        
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

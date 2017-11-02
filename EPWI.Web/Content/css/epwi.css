@@ -1,0 +1,593 @@
+﻿html, body {
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+
+body {
+	background: #8b1c1c url('../images/bg.jpg') repeat-x fixed;
+	font: 0.7em/1.5 Arial, Helvetica, sans-serif;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+span.nowrap 
+{
+    white-space: nowrap;
+}
+
+h1, h2, h3
+{
+    color:#8b1c1c;
+}
+
+a {
+	color: #8b1c1c;
+}
+
+a:hover, a:active
+{
+    color: #c22126;  
+}
+
+div.roundedCorners, div.roundedCorners div.upperRightCorner, div.roundedCorners h2.roundedCorners, div.roundedCornersBody, div.roundedCornersFooter, div.roundedCornersFooter p {
+    background: url("../images/roundedcorners.png");
+
+}
+
+div.mainContainer 
+{
+    z-index:1;
+	float:right;
+	margin-right:15px;
+	width:736px;
+}
+
+div.mainWrapper
+{
+    width:950px;
+    padding-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.sideContainer {
+	float:left; 
+	clear:both;
+	margin-left:5px;
+	width:186px;
+	margin-bottom: 20px;
+	font-size:0.8em;
+}
+
+div.mainContainerContent {
+	background: url(../images/engineoverlay.jpg) top center no-repeat;
+}
+
+div.roundedCorners div.upperRightCorner, div.roundedCorners h2.roundedCorners {
+	background-position: top right;
+	font-size:1.3em;
+	padding:15px;
+	padding-left:0;
+	padding-bottom: 1px;
+	margin:0;
+	position:relative;
+	right:-14px;
+}
+div.roundedCornersBody {
+	background-position: 100% -10px;
+	margin:0;
+	padding-bottom:5px;
+	padding-right:15px;
+	padding-top:1px;
+	padding-left:0;
+	position:relative;
+	right:-14px;
+}
+div.roundedCornersFooter {
+	background-position: bottom left;
+	position:relative;
+	top:11px;
+}
+
+div.roundedCornersFooter p {
+	background-position: bottom right;
+	padding:15px;
+	padding-top: 1px;
+	padding-left:0;
+	margin:-1.5em 0 0 0;
+	right:-14px;
+	position:relative;
+}
+
+div.roundedCornersFooter,span.homePageFooter p
+{
+    text-align:center;
+	color:#999;
+}
+
+span.homePageFooter
+{
+    margin: 0;
+    padding: 0;
+    position:relative;
+    top:-40px;
+    text-align: center;
+    /*width:750px;*/
+    z-index:2;
+}
+
+.mainColumn {
+	float:left;
+	width:760px;
+	margin-left:-5px;
+}
+
+.sideColumnWrapper
+{
+    float:left;
+    width:25px;
+}
+
+.sideColumn {
+	position:absolute;
+}
+
+div.slideshowContainer
+{
+    height:115px;
+    margin-left:5px;
+}
+
+img.slideshow
+{
+    border:0;
+    padding-left:0px;
+    width:200px;
+    height:120px;
+}
+
+.footnote 
+{
+    font-size:0.8em;
+}
+    
+
+#backgroundOverlay {
+	background:url(../images/bg-overlay.png) no-repeat top left fixed;
+	min-height: 100%;
+	/*padding-top: 10px;*/
+	width:100%;
+
+}
+
+div.breadcrumbs
+{
+    width:100%;
+    background-color:#CCC;
+    font-size:1.3em;
+}
+
+#header
+{
+    z-index:2;
+    margin-bottom:10px;
+    position:relative;
+}
+
+.em
+{
+    font-weight:bold;
+}
+
+img.submitbutton
+{
+    cursor: pointer;
+}
+
+div.StatusMessage
+{
+    color: Red;
+    font-weight: bold;
+}
+
+span.bold
+{
+    font-weight: bold;
+}
+
+ul.highlight
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+tr.highlighted, .highlight
+{
+    background-color:#FFC;
+}
+
+
+
+/* Processing block */
+.ProcessingBlock
+{
+	background-color: #BCC3C7;
+	filter:alpha(opacity=75); /* IE */
+	opacity:0.75; /* others */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; /*IE8*/	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	z-index: 9999;
+	display: none;
+}
+
+div.ajaxIndicator
+{
+    text-align:center;
+    margin-top:25px;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    float:right;
+    margin-top:0px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:left;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+#ui-datepicker-div
+{
+    z-index:9999;
+}
+
+div.opaque
+{
+    background-color:White;
+}
+
+/* Form fields */
+
+input[type="text"], input[type="password"], select, textarea
+{
+    background-color:#FFC;
+}
+
+form input.streetaddress, form input.name
+{
+    width:20em;
+}
+
+form input.city
+{
+    width:15em;
+}
+
+
+form input.state
+{
+    width:2em;
+}
+
+form input.zip, form input.widgetfield
+{
+    width:5em;
+}
+
+form input.zip4
+{
+    width:4em;
+}
+
+form input.phone
+{
+    width:10em;
+}
+
+form input.pricingfactor
+{
+    width:2em;
+}
+
+input.ponumber
+{
+    width:6em;
+}
+
+/* dialog boxes */
+
+.ui-dialog {
+    z-index: 10;
+}
+
+.ui-button-icon-only .ui-button-text {
+    display: none !important;
+}
+
+div.dialog
+{
+    font-size: 0.8em;   
+    display:none;
+}
+
+div.buttons,div.center
+{
+    text-align:center;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+div.menubar
+{
+    position:absolute;
+    width:100%;
+    top:90px;
+    left:0;
+}
+
+/* CSS Table Formatting */
+div.row
+{
+	clear: both;	
+	overflow:hidden;
+}
+
+div.underline
+{
+    border-bottom: solid 1px #CCCCCC;
+}
+    
+div.row span.label
+{
+    float:left;
+    width: 15%;
+}
+
+div.row span.emailLabel
+{
+    float:left;
+    width:40%;
+}
+
+div.row span.field
+{
+    float:right;
+    width:82%;
+}
+
+div.row span.emailField
+{
+    float:right;
+    width:55%
+}
+
+div.row span.emailField input,div.row span.emailField textarea
+{
+    width:90%
+}
+
+div.row span.widgetlabel
+{
+	float: left;
+	width: 67%;
+	text-align: left;
+	/*font-size:0.8em;*/
+}
+
+div.row span.widgetfield
+{
+	float: right;
+	width: 30%;
+	text-align: right;
+	/*font-size:0.8em;*/
+}
+
+div.threecolumn
+{
+    float:left;
+    width:30%;
+}
+
+/* END CSS Table Formatting */
+
+/* TABLE
+----------------------------------------------------------*/
+
+table.standard 
+{
+  border: solid 1px #CCC;
+  border-collapse: collapse;
+}
+
+table.standard td 
+{
+  padding: 2px;   
+  border: solid 1px #CCC;
+}
+
+table.standard th
+{
+  padding: 6px 5px;
+  text-align: left;
+  background-color: #CCC; 
+  border: solid 1px #CCC;   
+}
+
+tr.selectable, tr.InterchangePart
+{
+    cursor:pointer;
+}
+
+/* Order Form */
+tr.KitComponent
+{
+    background-color:#F6F6F6;
+    color:#666666;
+    border:none;
+}
+
+tr.Component
+{
+    background-color:White;
+}
+
+tr.ItemError
+{
+    color:Red;
+    font-weight:bold;
+}
+
+/* Statement / Invoice */
+table.statement th,table.invoice th
+{
+    background-color:#CECECE;
+    font-size:8pt;
+}
+
+/* Infield Labels */
+
+.infieldlabel
+{
+    color:Gray;
+}
+
+form#StockStatusWidgetForm
+{
+    display:inline;
+}
+
+/* Stock Status Search Widget */
+div#StockStatusWidget {
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 27px;
+ 
+      background:url(../images/StockStatus.gif);
+    position: relative;
+    /*margin-bottom:-5px;*/
+}
+
+div#StockStatusWidget #SSWidgetRequestedItemNumber
+{
+    margin-left:10px;
+    margin-top:5px;
+    width:155px;
+    border:0px;
+    background-color:white;
+}
+
+div#StockStatusWidget #StockStatusSearchIcon
+{
+    float:right;
+    height:25px;
+    width:25px;
+    cursor:pointer;
+    margin-top:0px; /* IE 7 and under only */
+}
+
+div#StockStatusWidget input.Search
+{
+    display:none;
+}
+    
+/* Pagination */
+.pagination {
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0;
+    padding-left: 0;
+    font-weight: bold;
+    text-align: center;
+}    
+
+.pagination > li {
+    display: inline;
+    /*background-color: #fff;*/
+    border: 1px solid #ddd;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;    
+}
+
+.pagination > li > a {
+    text-decoration: none;    
+}
+
+.pagination > li > a.disabled {
+    color: #999999;
+}
+
+.validation-summary-valid {
+    display:none;
+}

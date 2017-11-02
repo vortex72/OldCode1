@@ -1,0 +1,41 @@
+﻿/*#backgroundOverlay {
+	background:none;
+}
+
+div.row span.widgetlabel
+{
+    float:none;
+}
+
+div.row span.widgetfield
+{
+    margin-left:10px;
+    float:none;
+}
+
+div.threecolumn
+{
+    float:none;
+    width:auto;
+    margin-bottom:10px;
+}
+
+div#StockStatusWidget
+{
+    background:white;
+}
+
+div#StockStatusWidget #StockStatusSearchIcon
+{
+    display:none;
+}
+
+div#StockStatusWidget input.Search
+{
+    display:inline;
+}
+
+div#StockStatusWidget #RequestedItemNumber
+{
+    border:1px; 
+}*/

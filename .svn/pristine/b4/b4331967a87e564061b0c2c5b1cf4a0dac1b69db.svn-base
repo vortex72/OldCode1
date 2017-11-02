@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Opticat3.net/WS/OpticatEpcService/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Opticat3.net/WS/OpticatEpcService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Opticat3.net/WS/OpticatEpcService/Imports">
+      <xsd:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd0" namespace="http://Opticat3.net/WS/OpticatEpcService/" />
+      <xsd:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/OpticatEpcService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOpticatEpcService_GetYears_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYears" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetYears_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetYearsExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearsExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetYearsExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetMakes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakes" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetMakes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetMakesExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakesExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetMakesExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMakesExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetModels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModels" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetModels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetModelsExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelsExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetModelsExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBaseVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBaseVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBaseVehicleExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseVehicleExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBaseVehicleExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseVehicleExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSubmodelsExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubmodelsExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSubmodelsExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubmodelsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetTransmissionsByLegacyVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransmissionsByLegacyVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetTransmissionsByLegacyVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransmissionsByLegacyVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehiclesByBaseVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByBaseVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehiclesByBaseVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByBaseVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehiclesByLegacyVehicle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByLegacyVehicle" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehiclesByLegacyVehicle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByLegacyVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetCategoriesExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetCategoriesExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSubCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategories" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSubCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSubCategoriesExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoriesExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSubCategoriesExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoriesExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartTypes" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartTypesExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartTypesExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartTypesExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartTypesExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPositionQualifiers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionQualifiers" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPositionQualifiers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionQualifiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPositionsExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionsExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPositionsExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehicleQualifiers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleQualifiers" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehicleQualifiers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleQualifiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehicleConfigQualifiers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleConfigQualifiers" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehicleConfigQualifiers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleConfigQualifiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartApps_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartApps" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartApps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartAppsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartAppsRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartAppsRange" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetPartAppsRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPartAppsRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductInfoRangeExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoRangeExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductInfoRangeExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoRangeExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductInfoBySKUExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoBySKUExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductInfoBySKUExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoBySKUExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductInfoByBrandAAIAExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoByBrandAAIAExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductInfoByBrandAAIAExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductInfoByBrandAAIAExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationByBrandAAIAExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationByBrandAAIAExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationByBrandAAIAExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationByBrandAAIAExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationByProductLineIDExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationByProductLineIDExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationByProductLineIDExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationByProductLineIDExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationBySKUExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationBySKUExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductMetaInformationBySKUExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductMetaInformationBySKUExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetImagesByPartNumberAndBrandAAIAID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImagesByPartNumberAndBrandAAIAID" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetImagesByPartNumberAndBrandAAIAID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImagesByPartNumberAndBrandAAIAIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBuyersGuideByProductIDExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuyersGuideByProductIDExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBuyersGuideByProductIDExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBuyersGuideByProductIDExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehicleLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetVehicleLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVehicleLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductLinesContainingSubCategoryInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLinesContainingSubCategoryInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductLinesContainingSubCategoryInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLinesContainingSubCategoryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductLineInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLineInformation" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetProductLineInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLineInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetEnginesByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnginesByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetEnginesByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnginesByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBrakesByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrakesByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBrakesByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrakesByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBedByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetBedByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBedByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetDriveTypeByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriveTypeByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetDriveTypeByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDriveTypeByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSteeringByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSteeringByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSteeringByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSteeringByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSpringTypeByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpringTypeByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetSpringTypeByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpringTypeByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetTransmissionByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransmissionByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetTransmissionByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransmissionByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetWheelbaseByOpticatLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWheelbaseByOpticatLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_GetWheelbaseByOpticatLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWheelbaseByOpticatLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetPositionsExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetPositionsExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetPositionsExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetPositionsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetProductLinesContainingSubCategoryInfoExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetProductLinesContainingSubCategoryInfoExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetProductLinesContainingSubCategoryInfoExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetProductLinesContainingSubCategoryInfoExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetProductLinesContainingPartTypeInfoExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetProductLinesContainingPartTypeInfoExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetProductLinesContainingPartTypeInfoExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetProductLinesContainingPartTypeInfoExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetVehicleLookupExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetVehicleLookupExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetVehicleLookupExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetVehicleLookupExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetPartTypesExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetPartTypesExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetPartTypesExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetPartTypesExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetProductInfoRangeExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetProductInfoRangeExt" />
+  </wsdl:message>
+  <wsdl:message name="IOpticatEpcService_EPWI_GetProductInfoRangeExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EPWI_GetProductInfoRangeExtResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOpticatEpcService">
+    <wsdl:operation name="GetYears">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetYears" message="tns:IOpticatEpcService_GetYears_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetYearsResponse" message="tns:IOpticatEpcService_GetYears_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearsExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetYearsExt" message="tns:IOpticatEpcService_GetYearsExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetYearsExtResponse" message="tns:IOpticatEpcService_GetYearsExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMakes">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetMakes" message="tns:IOpticatEpcService_GetMakes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetMakesResponse" message="tns:IOpticatEpcService_GetMakes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMakesExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetMakesExt" message="tns:IOpticatEpcService_GetMakesExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetMakesExtResponse" message="tns:IOpticatEpcService_GetMakesExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModels">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetModels" message="tns:IOpticatEpcService_GetModels_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetModelsResponse" message="tns:IOpticatEpcService_GetModels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelsExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetModelsExt" message="tns:IOpticatEpcService_GetModelsExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetModelsExtResponse" message="tns:IOpticatEpcService_GetModelsExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseVehicle">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBaseVehicle" message="tns:IOpticatEpcService_GetBaseVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBaseVehicleResponse" message="tns:IOpticatEpcService_GetBaseVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseVehicleExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBaseVehicleExt" message="tns:IOpticatEpcService_GetBaseVehicleExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBaseVehicleExtResponse" message="tns:IOpticatEpcService_GetBaseVehicleExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubmodelsExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubmodelsExt" message="tns:IOpticatEpcService_GetSubmodelsExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubmodelsExtResponse" message="tns:IOpticatEpcService_GetSubmodelsExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransmissionsByLegacyVehicle">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetTransmissionsByLegacyVehicle" message="tns:IOpticatEpcService_GetTransmissionsByLegacyVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetTransmissionsByLegacyVehicleResponse" message="tns:IOpticatEpcService_GetTransmissionsByLegacyVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByBaseVehicle">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehiclesByBaseVehicle" message="tns:IOpticatEpcService_GetVehiclesByBaseVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehiclesByBaseVehicleResponse" message="tns:IOpticatEpcService_GetVehiclesByBaseVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByLegacyVehicle">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehiclesByLegacyVehicle" message="tns:IOpticatEpcService_GetVehiclesByLegacyVehicle_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehiclesByLegacyVehicleResponse" message="tns:IOpticatEpcService_GetVehiclesByLegacyVehicle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetCategories" message="tns:IOpticatEpcService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetCategoriesResponse" message="tns:IOpticatEpcService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetCategoriesExt" message="tns:IOpticatEpcService_GetCategoriesExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetCategoriesExtResponse" message="tns:IOpticatEpcService_GetCategoriesExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategories">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubCategories" message="tns:IOpticatEpcService_GetSubCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubCategoriesResponse" message="tns:IOpticatEpcService_GetSubCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoriesExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubCategoriesExt" message="tns:IOpticatEpcService_GetSubCategoriesExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubCategoriesExtResponse" message="tns:IOpticatEpcService_GetSubCategoriesExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartTypes">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartTypes" message="tns:IOpticatEpcService_GetPartTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartTypesResponse" message="tns:IOpticatEpcService_GetPartTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartTypesExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartTypesExt" message="tns:IOpticatEpcService_GetPartTypesExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartTypesExtResponse" message="tns:IOpticatEpcService_GetPartTypesExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionQualifiers">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPositionQualifiers" message="tns:IOpticatEpcService_GetPositionQualifiers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPositionQualifiersResponse" message="tns:IOpticatEpcService_GetPositionQualifiers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionsExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPositionsExt" message="tns:IOpticatEpcService_GetPositionsExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPositionsExtResponse" message="tns:IOpticatEpcService_GetPositionsExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleQualifiers">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleQualifiers" message="tns:IOpticatEpcService_GetVehicleQualifiers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleQualifiersResponse" message="tns:IOpticatEpcService_GetVehicleQualifiers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleConfigQualifiers">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleConfigQualifiers" message="tns:IOpticatEpcService_GetVehicleConfigQualifiers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleConfigQualifiersResponse" message="tns:IOpticatEpcService_GetVehicleConfigQualifiers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartApps">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartApps" message="tns:IOpticatEpcService_GetPartApps_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartAppsResponse" message="tns:IOpticatEpcService_GetPartApps_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartAppsRange">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartAppsRange" message="tns:IOpticatEpcService_GetPartAppsRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartAppsRangeResponse" message="tns:IOpticatEpcService_GetPartAppsRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoRangeExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoRangeExt" message="tns:IOpticatEpcService_GetProductInfoRangeExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoRangeExtResponse" message="tns:IOpticatEpcService_GetProductInfoRangeExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoBySKUExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoBySKUExt" message="tns:IOpticatEpcService_GetProductInfoBySKUExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoBySKUExtResponse" message="tns:IOpticatEpcService_GetProductInfoBySKUExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoByBrandAAIAExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoByBrandAAIAExt" message="tns:IOpticatEpcService_GetProductInfoByBrandAAIAExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoByBrandAAIAExtResponse" message="tns:IOpticatEpcService_GetProductInfoByBrandAAIAExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationExt" message="tns:IOpticatEpcService_GetProductMetaInformationExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationExtResponse" message="tns:IOpticatEpcService_GetProductMetaInformationExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationByBrandAAIAExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationByBrandAAIAExt" message="tns:IOpticatEpcService_GetProductMetaInformationByBrandAAIAExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationByBrandAAIAExtResponse" message="tns:IOpticatEpcService_GetProductMetaInformationByBrandAAIAExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationByProductLineIDExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationByProductLineIDExt" message="tns:IOpticatEpcService_GetProductMetaInformationByProductLineIDExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationByProductLineIDExtResponse" message="tns:IOpticatEpcService_GetProductMetaInformationByProductLineIDExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationBySKUExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationBySKUExt" message="tns:IOpticatEpcService_GetProductMetaInformationBySKUExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationBySKUExtResponse" message="tns:IOpticatEpcService_GetProductMetaInformationBySKUExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImagesByPartNumberAndBrandAAIAID">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetImagesByPartNumberAndBrandAAIAID" message="tns:IOpticatEpcService_GetImagesByPartNumberAndBrandAAIAID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetImagesByPartNumberAndBrandAAIAIDResponse" message="tns:IOpticatEpcService_GetImagesByPartNumberAndBrandAAIAID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyersGuideByProductIDExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBuyersGuideByProductIDExt" message="tns:IOpticatEpcService_GetBuyersGuideByProductIDExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBuyersGuideByProductIDExtResponse" message="tns:IOpticatEpcService_GetBuyersGuideByProductIDExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleLookupExt" message="tns:IOpticatEpcService_GetVehicleLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleLookupExtResponse" message="tns:IOpticatEpcService_GetVehicleLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLinesContainingSubCategoryInfo">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductLinesContainingSubCategoryInfo" message="tns:IOpticatEpcService_GetProductLinesContainingSubCategoryInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductLinesContainingSubCategoryInfoResponse" message="tns:IOpticatEpcService_GetProductLinesContainingSubCategoryInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLineInformation">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductLineInformation" message="tns:IOpticatEpcService_GetProductLineInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductLineInformationResponse" message="tns:IOpticatEpcService_GetProductLineInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnginesByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetEnginesByOpticatLookupExt" message="tns:IOpticatEpcService_GetEnginesByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetEnginesByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetEnginesByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrakesByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBrakesByOpticatLookupExt" message="tns:IOpticatEpcService_GetBrakesByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBrakesByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetBrakesByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBedByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBedByOpticatLookupExt" message="tns:IOpticatEpcService_GetBedByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBedByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetBedByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriveTypeByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetDriveTypeByOpticatLookupExt" message="tns:IOpticatEpcService_GetDriveTypeByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetDriveTypeByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetDriveTypeByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSteeringByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSteeringByOpticatLookupExt" message="tns:IOpticatEpcService_GetSteeringByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSteeringByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetSteeringByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpringTypeByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSpringTypeByOpticatLookupExt" message="tns:IOpticatEpcService_GetSpringTypeByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSpringTypeByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetSpringTypeByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransmissionByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetTransmissionByOpticatLookupExt" message="tns:IOpticatEpcService_GetTransmissionByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetTransmissionByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetTransmissionByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWheelbaseByOpticatLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetWheelbaseByOpticatLookupExt" message="tns:IOpticatEpcService_GetWheelbaseByOpticatLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetWheelbaseByOpticatLookupExtResponse" message="tns:IOpticatEpcService_GetWheelbaseByOpticatLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetPositionsExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetPositionsExt" message="tns:IOpticatEpcService_EPWI_GetPositionsExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetPositionsExtResponse" message="tns:IOpticatEpcService_EPWI_GetPositionsExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetProductLinesContainingSubCategoryInfoExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductLinesContainingSubCategoryInfoExt" message="tns:IOpticatEpcService_EPWI_GetProductLinesContainingSubCategoryInfoExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductLinesContainingSubCategoryInfoExtResponse" message="tns:IOpticatEpcService_EPWI_GetProductLinesContainingSubCategoryInfoExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetProductLinesContainingPartTypeInfoExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductLinesContainingPartTypeInfoExt" message="tns:IOpticatEpcService_EPWI_GetProductLinesContainingPartTypeInfoExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductLinesContainingPartTypeInfoExtResponse" message="tns:IOpticatEpcService_EPWI_GetProductLinesContainingPartTypeInfoExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetVehicleLookupExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetVehicleLookupExt" message="tns:IOpticatEpcService_EPWI_GetVehicleLookupExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetVehicleLookupExtResponse" message="tns:IOpticatEpcService_EPWI_GetVehicleLookupExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetPartTypesExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetPartTypesExt" message="tns:IOpticatEpcService_EPWI_GetPartTypesExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetPartTypesExtResponse" message="tns:IOpticatEpcService_EPWI_GetPartTypesExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetProductInfoRangeExt">
+      <wsdl:input wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductInfoRangeExt" message="tns:IOpticatEpcService_EPWI_GetProductInfoRangeExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductInfoRangeExtResponse" message="tns:IOpticatEpcService_EPWI_GetProductInfoRangeExt_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

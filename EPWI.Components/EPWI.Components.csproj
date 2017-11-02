@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DA81EF2-4E58-4641-8C26-7E808FD7DF1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPWI.Components</RootNamespace>
+    <AssemblyName>EPWI.Components</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.0-beta7\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net35-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xVal">
+      <HintPath>..\External Assemblies\xVal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\AccessDeniedException.cs" />
+    <Compile Include="Exceptions\KitNoNipcCodeFoundException.cs" />
+    <Compile Include="Exceptions\RuleException.cs" />
+    <Compile Include="Models\AccountRepository.cs" />
+    <Compile Include="Models\AccountSettings.cs" />
+    <Compile Include="Models\AccountStatus.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\CatalogRepository.cs" />
+    <Compile Include="Models\CategoryFamilyRepository.cs" />
+    <Compile Include="Models\CustomerNumberByInvoiceResult.cs" />
+    <Compile Include="Models\CustomerServiceRep.cs" />
+    <Compile Include="Models\DataDownloadExclusion.cs" />
+    <Compile Include="Models\EPWI.cs">
+      <DependentUpon>EPWI.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EPWI.designer.cs">
+      <DependentUpon>EPWI.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Models\EpwiAcesSubcategory.cs" />
+    <Compile Include="Models\FlatInvoice.cs" />
+    <Compile Include="Models\InterchangeException.cs" />
+    <Compile Include="Models\IOrderRepository.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\PowerUserWarehouseResult.cs" />
+    <Compile Include="Models\QuoteDetail.cs" />
+    <Compile Include="Models\ShipMethodDetail.cs" />
+    <Compile Include="Models\Slideshow.cs" />
+    <Compile Include="Models\SlideshowMetadata.cs" />
+    <Compile Include="Models\SlideShowRepository.cs" />
+    <Compile Include="Models\FulfillmentPart.cs" />
+    <Compile Include="Models\FulfillmentProcessingResult.cs" />
+    <Compile Include="Models\HostOrder.cs" />
+    <Compile Include="Models\InterchangeRepository.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\InvoiceDateSearch.cs" />
+    <Compile Include="Models\InvoiceDetail.cs" />
+    <Compile Include="Models\InvoicePartSearch.cs" />
+    <Compile Include="Models\InvoicePartSearchResult.cs" />
+    <Compile Include="Models\InvoiceDateSearchResult.cs" />
+    <Compile Include="Models\InvoiceSearchDirection.cs" />
+    <Compile Include="Models\InvoiceSelections.cs" />
+    <Compile Include="Models\InvoiceViewModel.cs" />
+    <Compile Include="Models\Kit.cs" />
+    <Compile Include="Models\KitCatalogManufacturerKit.cs" />
+    <Compile Include="Models\KitCatalogRepository.cs" />
+    <Compile Include="Models\KitCategory.cs" />
+    <Compile Include="Models\KitCategoryMapping.cs" />
+    <Compile Include="Models\KitCategoryNote.cs" />
+    <Compile Include="Models\KitIdentifier.cs" />
+    <Compile Include="Models\KitPart.cs" />
+    <Compile Include="Models\KitRepository.cs" />
+    <Compile Include="Models\KitType.cs" />
+    <Compile Include="Models\LineRepository.cs" />
+    <Compile Include="Models\LogRepository.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\MillionthPartViewModel.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\OrderMethod.cs" />
+    <Compile Include="Models\OrderRepository.cs" />
+    <Compile Include="Models\PriceType.cs" />
+    <Compile Include="Models\EPWIDataContextPartial.cs" />
+    <Compile Include="Models\ICustomerData.cs" />
+    <Compile Include="Models\Interchange.cs" />
+    <Compile Include="Models\InventoryItem.cs" />
+    <Compile Include="Models\InventoryItemRepository.cs" />
+    <Compile Include="Models\QuoteRepository.cs" />
+    <Compile Include="Models\RelatedCategory.cs" />
+    <Compile Include="Models\RelatedCategoryMapping.cs" />
+    <Compile Include="Models\Repository.cs" />
+    <Compile Include="Models\ResetPasswordModel.cs" />
+    <Compile Include="Models\RoleMembershipList.cs" />
+    <Compile Include="Models\RoleRepository.cs" />
+    <Compile Include="Models\ShippingCarrier.cs" />
+    <Compile Include="Models\Statement.cs" />
+    <Compile Include="Models\StatementDetail.cs" />
+    <Compile Include="Models\StockStatus.cs" />
+    <Compile Include="Models\StockStatusRepository.cs" />
+    <Compile Include="Models\StockStatusRequest.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAdminSettings.cs" />
+    <Compile Include="Models\UserProfile.cs" />
+    <Compile Include="Models\UserRepository.cs" />
+    <Compile Include="Models\Warranty.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Proxies\AccountStatusProxy.cs" />
+    <Compile Include="Proxies\AcesKitNumberProxy.cs" />
+    <Compile Include="Proxies\AcesProxy.cs" />
+    <Compile Include="Proxies\AvailableShipMethodsProxy.cs" />
+    <Compile Include="Proxies\CrunchProxy.cs" />
+    <Compile Include="Proxies\CustomerNumberByInvoiceProxy.cs" />
+    <Compile Include="Proxies\CustomerServiceRepProxy.cs" />
+    <Compile Include="Proxies\DataDownloadProxy.cs" />
+    <Compile Include="Proxies\EmailCustomerServiceRepProxy.cs" />
+    <Compile Include="Proxies\FulfillmentProcessingProxy.cs" />
+    <Compile Include="Proxies\InterchangeProxy.cs" />
+    <Compile Include="Proxies\InvoiceDateSearchProxy.cs" />
+    <Compile Include="Proxies\InvoicePartSearchProxy.cs" />
+    <Compile Include="Proxies\InvoiceProxy.cs" />
+    <Compile Include="Proxies\KitPricingRequestProxy.cs" />
+    <Compile Include="Proxies\KitWarrantyProxy.cs" />
+    <Compile Include="Proxies\MillionthPartProxy.cs" />
+    <Compile Include="Proxies\OrderHeaderProxy.cs" />
+    <Compile Include="Proxies\OrderHeaderUpdateProxy.cs" />
+    <Compile Include="Proxies\OrderItemProxy.cs" />
+    <Compile Include="Proxies\OrderItemUpdateProxy.cs" />
+    <Compile Include="Proxies\PowerUserWarehouseProxy.cs" />
+    <Compile Include="Proxies\Proxy.cs" />
+    <Compile Include="Proxies\StatementProxy.cs" />
+    <Compile Include="Proxies\StockStatusProxy.cs" />
+    <Compile Include="Proxies\SystemStatusProxy.cs" />
+    <Compile Include="Services\PowerUserService.cs" />
+    <Compile Include="Utility\Constants.cs" />
+    <Compile Include="Utility\DataAnnotationsValidationRunner.cs" />
+    <Compile Include="Utility\DataSetLinqOperators.cs" />
+    <Compile Include="Utility\AdoUtils.cs" />
+    <Compile Include="Utility\Dynamic.cs" />
+    <Compile Include="Utility\FileUtility.cs" />
+    <Compile Include="Utility\MailUtility.cs" />
+    <Compile Include="Utility\PriceUtility.cs" />
+    <Compile Include="Utility\StringUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\EPWI.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EPWI.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\EPWI.dbml.layout">
+      <DependentUpon>EPWI.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Utility\ADORecordSet.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

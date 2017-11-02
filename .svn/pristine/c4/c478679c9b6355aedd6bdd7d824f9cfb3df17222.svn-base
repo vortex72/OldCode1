@@ -1,0 +1,1032 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BBB42FC-AF28-4145-BF89-5EA7AB943899}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPWI.Web</RootNamespace>
+    <AssemblyName>EPWI.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LINQtoCSV, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LINQtoCSV.1.5.0.0\lib\net35\LINQtoCSV.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcReCaptcha">
+      <HintPath>..\External Assemblies\MvcReCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="N2, Version=2.9.6.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\N2CMS.Library.2.9.6.14\lib\net45\N2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="N2.Extensions, Version=2.9.6.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\N2CMS.Management.2.9.6.14\lib\N2.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="N2.Management, Version=2.9.6.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\N2CMS.Management.2.9.6.14\lib\N2.Management.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="N2.Packaging, Version=2.9.6.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\N2CMS.Management.2.9.6.14\lib\N2.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="N2.Search.Lucene, Version=2.9.6.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\N2CMS.Search.Lucene.2.9.6.14\lib\N2.Search.Lucene.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xVal">
+      <HintPath>..\External Assemblies\xVal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CmsConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DataDownloadController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
+    <Compile Include="Controllers\EpwiController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KitCatalogController.cs" />
+    <Compile Include="Controllers\KitController.cs" />
+    <Compile Include="Controllers\LoggingController.cs" />
+    <Compile Include="Controllers\LookupController.cs" />
+    <Compile Include="Controllers\MillionthPartController.cs" />
+    <Compile Include="Controllers\N2CMS\ContentController.cs" />
+    <Compile Include="Controllers\N2CMS\CatalogController.cs" />
+    <Compile Include="Controllers\N2CMS\LinkItemContainerController.cs" />
+    <Compile Include="Controllers\N2CMS\ListItemContainerController.cs" />
+    <Compile Include="Controllers\N2CMS\MenuPageController.cs" />
+    <Compile Include="Controllers\N2CMS\ListItemController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\QuoteController.cs" />
+    <Compile Include="Controllers\SlideShowController.cs" />
+    <Compile Include="Controllers\StockStatusController.cs" />
+    <Compile Include="DynamicData\Content\FilterUserControl.ascx.cs">
+      <DependentUpon>FilterUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Content\FilterUserControl.ascx.designer.cs">
+      <DependentUpon>FilterUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.designer.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.designer.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exception\UserInvalidException.cs" />
+    <Compile Include="Filters\LogErrorAttribute.cs" />
+    <Compile Include="Filters\LogRequestAttribute.cs" />
+    <Compile Include="Filters\RedirectOnErrorAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelpers\AccountStatusHelpers.cs" />
+    <Compile Include="HtmlHelpers\ControllerExtensions.cs" />
+    <Compile Include="HtmlHelpers\FormattingHelpers.cs" />
+    <Compile Include="HtmlHelpers\UtilityHelpers.cs" />
+    <Compile Include="HtmlHelpers\WarehouseHelpers.cs" />
+    <Compile Include="ModelBinders\SessionModelBinder.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KitBuilderViewModel.cs" />
+    <Compile Include="Models\KitCatalogIndexViewModel.cs" />
+    <Compile Include="Models\KitCatalogListingViewModel.cs" />
+    <Compile Include="Models\KitCategoryViewModel.cs" />
+    <Compile Include="Models\KitInterchangeViewModel.cs" />
+    <Compile Include="Models\KitModelBase.cs" />
+    <Compile Include="Models\KitStockStatusViewModel.cs" />
+    <Compile Include="Models\KitViewViewModel.cs" />
+    <Compile Include="Models\LineDownloadViewModel.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MenuViewModel.cs" />
+    <Compile Include="Models\MultipleInvoiceViewModel.cs" />
+    <Compile Include="Models\N2CMS\AbstractPage.cs" />
+    <Compile Include="Models\N2CMS\CatalogViewModel.cs" />
+    <Compile Include="Models\N2CMS\ContainerViewModel.cs" />
+    <Compile Include="Models\N2CMS\CatalogPage.cs" />
+    <Compile Include="Models\N2CMS\ContentPage.cs" />
+    <Compile Include="Models\N2CMS\ItemContainer.cs" />
+    <Compile Include="Models\N2CMS\LinkItem.cs" />
+    <Compile Include="Models\N2CMS\LinkItemContainer.cs" />
+    <Compile Include="Models\N2CMS\ListItemContainer.cs" />
+    <Compile Include="Models\N2CMS\ListItemPage.cs" />
+    <Compile Include="Models\N2CMS\ListItemViewModel.cs" />
+    <Compile Include="Models\N2CMS\MenuPage.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="Models\QuoteHelpRequestViewModel.cs" />
+    <Compile Include="Models\QuotesViewModel.cs" />
+    <Compile Include="Models\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\SessionStore.cs" />
+    <Compile Include="Models\StockStatusViewModel.cs" />
+    <Compile Include="Models\UserEditViewModel.cs" />
+    <Compile Include="Models\WarehouseList.cs" />
+    <Compile Include="Models\WarrantyViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\EpwiRoleProvider.cs" />
+    <Compile Include="Service References\Opticat\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utility\CustomDynamicDataRouteHandler.cs" />
+    <Compile Include="Utility\DynamicDataSecurity.cs" />
+    <Compile Include="Utility\ExtensionMethods.cs" />
+    <Compile Include="Utility\HtmlHelperExtensions.cs" />
+    <Compile Include="Utility\OpticatService.cs" />
+    <Compile Include="Views\Shared\DynamicData.Master.cs">
+      <DependentUpon>DynamicData.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\DynamicData.Master.designer.cs">
+      <DependentUpon>DynamicData.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\colorbox.css" />
+    <Content Include="Content\css\AccountStatus.css" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\css\Smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\css\Smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\Smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\css\Smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\css\Smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\css\Smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\css\Smoothness\jquery-ui-1.12.0-rc.2.css" />
+    <Content Include="Content\css\Smoothness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\arrows-ffffff.png" />
+    <Content Include="Content\images\Back.gif" />
+    <Content Include="Content\images\bg-overlay.png" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\check.gif" />
+    <Content Include="Content\images\closelabel.gif" />
+    <Content Include="Content\css\colorbox.css" />
+    <Content Include="Content\css\DynamicData.css" />
+    <Content Include="Content\images\engineoverlay.jpg" />
+    <Content Include="Content\css\epwi.css" />
+    <Content Include="Content\images\epwi_logo.gif" />
+    <Content Include="Content\faxcover_north.xsl" />
+    <Content Include="Content\faxcover_south.xsl" />
+    <Content Include="Content\images\header.gif" />
+    <Content Include="Content\images\header_back.gif" />
+    <Content Include="Content\images\homepage.jpg" />
+    <Content Include="Content\css\ie6.css" />
+    <Content Include="Content\images\border.png" />
+    <Content Include="Content\images\controls.png" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\loading_background.png" />
+    <Content Include="Content\images\overlay.png" />
+    <Content Include="Content\images\indicator_arrows.gif" />
+    <Content Include="Content\images\invoice_enginepro_logo.gif" />
+    <Content Include="Content\images\invoice_net_logo.gif" />
+    <Content Include="Content\images\invoice_std_logo.gif" />
+    <Content Include="Content\css\kits.css" />
+    <Content Include="Content\images\kit_remove.gif" />
+    <Content Include="Content\images\kit_revert.gif" />
+    <Content Include="Content\images\kit_subst.gif" />
+    <Content Include="Content\images\PgFirst.gif" />
+    <Content Include="Content\images\PgLast.gif" />
+    <Content Include="Content\images\PgNext.gif" />
+    <Content Include="Content\images\PgPrev.gif" />
+    <Content Include="Content\images\plus.gif" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\jquery-ui-1.9.2\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.accordion.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.button.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.core.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.dialog.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.menu.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.resizable.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.selectable.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.slider.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.spinner.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.tabs.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.theme.min.css" />
+    <Content Include="Content\jquery-ui-1.9.2\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\loading.gif" />
+    <Content Include="Content\images\nextlabel.gif" />
+    <Content Include="Content\images\OptiCatSmall.jpg" />
+    <Content Include="Content\images\Powered-By.png" />
+    <Content Include="Content\images\prevlabel.gif" />
+    <Content Include="Content\css\print.css" />
+    <Content Include="Content\Products\10609.jpg" />
+    <Content Include="Content\Products\10670.jpg" />
+    <Content Include="Content\Products\230685.jpg" />
+    <Content Include="Content\Products\232106.jpg" />
+    <Content Include="Content\Products\245747.jpg" />
+    <Content Include="Content\Products\356543.jpg" />
+    <Content Include="Content\Products\50208.jpg" />
+    <Content Include="Content\Products\51042.jpg" />
+    <Content Include="Content\Products\51044.jpg" />
+    <Content Include="Content\images\qty_change.gif" />
+    <Content Include="Content\images\qty_rem.gif" />
+    <Content Include="Content\images\roundedcorners.png" />
+    <Content Include="Content\images\search.gif" />
+    <Content Include="Content\images\shadow.png" />
+    <Content Include="Content\images\slideshow_1.gif" />
+    <Content Include="Content\images\spacer.gif" />
+    <Content Include="Content\css\stockstatus.css" />
+    <Content Include="Content\images\stockstatus.gif" />
+    <Content Include="Content\css\superfish.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\css\YUIPaginatorDatatable.css" />
+    <Content Include="Data Tools\Data Scripts\00_dbo.usp_GetKitCatalogMasterKitParts.sql" />
+    <Content Include="Data Tools\Data Scripts\01_dbo.usp_GetKitCatalogMasterKitParts.sql" />
+    <Content Include="Data Tools\EPWI log truncation.sql" />
+    <Content Include="DynamicData\Content\FilterUserControl.ascx" />
+    <Content Include="DynamicData\Content\GridViewPager.ascx" />
+    <Content Include="DynamicData\Content\Images\Back.gif" />
+    <Content Include="DynamicData\Content\Images\header_back.gif" />
+    <Content Include="DynamicData\Content\Images\PgFirst.gif" />
+    <Content Include="DynamicData\Content\Images\PgLast.gif" />
+    <Content Include="DynamicData\Content\Images\PgNext.gif" />
+    <Content Include="DynamicData\Content\Images\PgPrev.gif" />
+    <Content Include="DynamicData\Content\Images\plus.gif" />
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Content Include="DynamicData\PageTemplates\Details.aspx" />
+    <Content Include="DynamicData\PageTemplates\Edit.aspx" />
+    <Content Include="DynamicData\PageTemplates\Insert.aspx" />
+    <Content Include="DynamicData\PageTemplates\List.aspx" />
+    <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="EPWI.Web.log4net" />
+    <Content Include="LegacyAdmin\data_import.asp" />
+    <Content Include="LegacyAdmin\data_import_maps.asp" />
+    <Content Include="LegacyAdmin\page_layout\body_end.asp" />
+    <Content Include="LegacyAdmin\page_layout\body_start.asp" />
+    <Content Include="LegacyAdmin\page_layout\head_content - Without Google Analytics.asp" />
+    <Content Include="LegacyAdmin\page_layout\head_content.asp" />
+    <Content Include="LegacyAdmin\rawdata\Placeholder.txt" />
+    <Content Include="LegacyAdmin\std_includes\adovbs.inc" />
+    <Content Include="LegacyAdmin\std_includes\dbconn.inc" />
+    <Content Include="LegacyAdmin\std_includes\debug.asp" />
+    <Content Include="LegacyAdmin\std_includes\email_forms.asp" />
+    <Content Include="LegacyAdmin\std_includes\epwi_functions.asp" />
+    <Content Include="LegacyAdmin\std_includes\form_validation.asp" />
+    <Content Include="LegacyAdmin\std_includes\login_functions.asp" />
+    <Content Include="LegacyAdmin\std_includes\pageinit.asp" />
+    <Content Include="LegacyAdmin\std_includes\pagerelease.asp" />
+    <Content Include="LegacyAdmin\std_includes\std_functions.asp" />
+    <Content Include="LegacyAdmin\std_includes\variables.asp" />
+    <Content Include="LegacyAdmin\std_includes\xml_functions.asp" />
+    <Content Include="LegacyAdmin\std_includes\~variables_forESYN.asp" />
+    <Content Include="LegacyAdmin\std_includes\~xml_functions.asp" />
+    <Content Include="LegacyAdmin\std_includes\~xml_functions_forESYN.asp" />
+    <Content Include="DynamicData\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Data Tools\prod-to-dev.dcmp" />
+    <Content Include="Data Tools\prod-to-local.dcmp" />
+    <Content Include="Data Tools\dev-to-local.dcmp" />
+    <Content Include="N2\N2.zip" />
+    <None Include="N2\n2cms.configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="N2\web.config" />
+    <None Include="Properties\PublishProfiles\EPWI - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EPWI-staging - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EPWI-staging - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\epwitest - FTP.pubxml" />
+    <None Include="Scripts\jquery-3.0.0.intellisense.js" />
+    <Content Include="N2\history.txt" />
+    <Content Include="N2\howto_develop.txt" />
+    <Content Include="N2\howto_install.txt" />
+    <Content Include="N2\license.txt" />
+    <Content Include="N2\n2_readme.txt" />
+    <Content Include="N2\upgrade.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0-rc.2.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.colorbox-min.js" />
+    <Content Include="Scripts\jquery.cycle.lite.1.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.0.debug.js" />
+    <Content Include="Scripts\knockout-3.4.0.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\site\AccountStatus.js" />
+    <Content Include="Scripts\site\amplify.core.min.js" />
+    <Content Include="Scripts\site\amplify.store.min.js" />
+    <Content Include="Scripts\site\Catalog.js" />
+    <Content Include="Scripts\site\ckconfig.js" />
+    <Content Include="Scripts\site\columnizeList.js" />
+    <Content Include="Scripts\site\DataDownload.js" />
+    <Content Include="Scripts\site\global.js" />
+    <Content Include="Scripts\site\InvoiceList.js" />
+    <Content Include="Scripts\site\jquery.cycle.lite.1.0.min.js" />
+    <Content Include="Scripts\site\KitBuild.js" />
+    <Content Include="Scripts\site\KitDialog.js" />
+    <Content Include="Scripts\site\KitEdit-2.1.js" />
+    <Content Include="Scripts\knockout-jqueryui.min.js" />
+    <Content Include="Scripts\site\lookup.js" />
+    <Content Include="Scripts\site\OrderForm-2.1.js" />
+    <Content Include="Scripts\site\PageActions.js" />
+    <Content Include="Scripts\site\PartViewer.js" />
+    <Content Include="Scripts\site\Quotes.js" />
+    <Content Include="Scripts\site\Register.js" />
+    <Content Include="Scripts\site\RequestQuoteHelp.js" />
+    <Content Include="Scripts\site\StockStatus-2.1.js" />
+    <Content Include="Scripts\site\UserList.js" />
+    <Content Include="Scripts\site\xVal.jquery.validate.js" />
+    <Content Include="Scripts\site\YUIDatatable.js" />
+    <Content Include="Scripts\superfish_supersubs.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesBaseVehicle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesBedConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesBrakeConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesDriveType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesEngineConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesMake.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesPartAppsContainer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesPartType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesSpringTypeConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesSteeringConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesSubCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesSubModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesTransmission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesVehicle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.AcesWheelbase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.BuyersGuideEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.EpcPartApp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.EpcPartAppMetaInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.EpcPositionQualifiers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.EpcVehicleConfigQualifiers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.EpcVehicleQualifiers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.ProductInformationContainer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Opticat\EPWI.Web.Opticat.ProductLineInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Opticat\OpticatEpcService.disco" />
+    <None Include="Service References\Opticat\configuration91.svcinfo" />
+    <None Include="Service References\Opticat\configuration.svcinfo" />
+    <None Include="Service References\Opticat\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Account\AccountInfoUnavailable.aspx" />
+    <Content Include="Views\Account\Create.aspx" />
+    <Content Include="Views\Account\DataDownloadAccessRequestNotification.aspx" />
+    <Content Include="Views\Account\DateSearchNavigation.ascx" />
+    <Content Include="Views\Account\Edit.aspx" />
+    <Content Include="Views\Account\Invoice.aspx" />
+    <Content Include="Views\Account\InvoiceContent.ascx" />
+    <Content Include="Views\Account\InvoiceDateSearch.aspx" />
+    <Content Include="Views\Account\InvoiceHeader.ascx" />
+    <Content Include="Views\Account\InvoicePartSearch.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\MultipleInvoices.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Account\RegistrationComplete.aspx" />
+    <Content Include="Views\Account\RequestDataDownloadAccess.aspx" />
+    <Content Include="Views\Account\ResetPassword.aspx" />
+    <Content Include="Views\Account\ResetPasswordTemplate.aspx" />
+    <Content Include="Views\Account\Settings.aspx" />
+    <Content Include="Views\Account\Statement.aspx" />
+    <Content Include="Views\Account\StatementContent.ascx" />
+    <Content Include="Views\Account\Status.aspx" />
+    <Content Include="Views\Account\UserAdminSettings.ascx" />
+    <Content Include="Views\Account\UserRegistrationNotification.aspx" />
+    <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Admin\TableMaintenance.aspx" />
+    <Content Include="Views\Admin\UserList.aspx" />
+    <Content Include="Views\Catalog\Index.aspx" />
+    <Content Include="Views\Content\Index.aspx" />
+    <Content Include="Views\MenuPage\Index.aspx" />
+    <Content Include="Views\DataDownload\Index.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Blank.aspx" />
+    <Content Include="Views\Home\ComingSoon.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\KitCatalog\Index.aspx" />
+    <Content Include="Views\KitCatalog\KitCatalogHeader.ascx" />
+    <Content Include="Views\KitCatalog\Make.aspx" />
+    <Content Include="Views\Kit\Aces.aspx" />
+    <Content Include="Views\Kit\AcesBuild.aspx" />
+    <Content Include="Views\Kit\AcesEdit.aspx" />
+    <Content Include="Views\Kit\Build.aspx" />
+    <Content Include="Views\Kit\Edit.aspx" />
+    <Content Include="Views\Kit\EditDialogs.ascx" />
+    <Content Include="Views\Kit\InterchangeHeader.ascx" />
+    <Content Include="Views\Kit\InterchangePart.ascx" />
+    <Content Include="Views\Kit\InterchangeShipmentOptions.ascx" />
+    <Content Include="Views\Kit\InvalidKit.aspx" />
+    <Content Include="Views\Kit\KitCategory.ascx" />
+    <Content Include="Views\Kit\KitDisplay.ascx" />
+    <Content Include="Views\Kit\KitHeader.ascx" />
+    <Content Include="Views\Kit\KitPricingAndSubmitButtons.ascx" />
+    <Content Include="Views\Kit\KitSizeSelection.ascx" />
+    <Content Include="Views\Kit\KitTypeAndYearSelection.ascx" />
+    <Content Include="Views\Kit\KitWizard.ascx" />
+    <Content Include="Views\Kit\KtrackDisplay.ascx" />
+    <Content Include="Views\Kit\View.aspx" />
+    <Content Include="Views\Kit\Warranty.ascx" />
+    <Content Include="Views\LinkItemContainer\Index.aspx" />
+    <Content Include="Views\ListItemContainer\Index.aspx" />
+    <Content Include="Views\ListItem\Index.aspx" />
+    <Content Include="Views\Lookup\Index.aspx" />
+    <Content Include="Views\MillionthPart\GuessFormFields.ascx" />
+    <Content Include="Views\MillionthPart\GuessSubmitted.aspx" />
+    <Content Include="Views\MillionthPart\Index.aspx" />
+    <Content Include="Views\Order\Address.ascx" />
+    <Content Include="Views\Order\EditAddress.ascx" />
+    <Content Include="Views\Order\EditCustomerReference.ascx" />
+    <Content Include="Views\Order\OpenPowerUserOrder.aspx" />
+    <Content Include="Views\Order\OrderDetails.ascx" />
+    <Content Include="Views\Order\OrderForm.aspx" />
+    <Content Include="Views\Order\OrderPowerUserStatus.ascx" />
+    <Content Include="Views\Order\OrderWidget.ascx" />
+    <Content Include="Views\Order\PowerUserAddress.ascx" />
+    <Content Include="Views\Order\SaveAsQuoteForm.ascx" />
+    <Content Include="Views\Quote\Index.aspx" />
+    <Content Include="Views\Quote\PostQuoteSaveOptions.ascx" />
+    <Content Include="Views\Quote\QuoteList.ascx" />
+    <Content Include="Views\Quote\RequestHelp.ascx" />
+    <Content Include="Views\Quote\Search.ascx" />
+    <Content Include="Views\Shared\AccessDenied.aspx" />
+    <Content Include="Views\Shared\Breadcrumbs.ascx" />
+    <Content Include="Views\Shared\CustomerInfo.ascx" />
+    <Content Include="Views\Shared\CustomerReference.ascx" />
+    <Content Include="Views\Shared\EmailDialog.ascx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\FaxDialog.ascx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\FooterCDN.ascx" />
+    <Content Include="Views\Shared\GoogleAnalytics.ascx" />
+    <Content Include="Views\Shared\HeaderCDN.ascx" />
+    <Content Include="Views\Shared\IE6Warning.ascx" />
+    <Content Include="Views\Shared\KitExistsDialog.ascx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\LookupWidget.ascx" />
+    <Content Include="Views\Shared\Menu.ascx" />
+    <Content Include="Views\Shared\Messages.ascx" />
+    <Content Include="Views\Shared\PartViewer.ascx" />
+    <Content Include="Views\Shared\RegisterDialog.ascx" />
+    <Content Include="Views\Shared\SearchWidget.ascx" />
+    <Content Include="Views\Shared\ShipToAddress.ascx" />
+    <Content Include="Views\Shared\UpdateCustomerID.ascx" />
+    <Content Include="Views\Shared\UserProfile.ascx" />
+    <Content Include="Views\Shared\ViewInvoice.ascx" />
+    <Content Include="Views\SlideShow\Edit.aspx" />
+    <Content Include="Views\SlideShow\Index.aspx" />
+    <Content Include="Views\SlideShow\SlideShow.ascx" />
+    <Content Include="Views\StockStatus\Interchanges.ascx" />
+    <Content Include="Views\StockStatus\KitOrderOptions.ascx" />
+    <Content Include="Views\StockStatus\KitPrices.ascx" />
+    <Content Include="Views\StockStatus\KitSearch.ascx" />
+    <Content Include="Views\StockStatus\OrderOptions.ascx" />
+    <Content Include="Views\StockStatus\Prices.ascx" />
+    <Content Include="Views\StockStatus\Search.aspx" />
+    <Content Include="Views\StockStatus\WarehouseAvailability.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\DynamicData.Master" />
+    <Content Include="Views\Shared\HomePage.Master" />
+    <Content Include="Views\Shared\NoCode.Master" />
+    <Content Include="Views\Shared\NoWidgets.Master" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\underscore.min.map" />
+    <None Include="Service References\Opticat\OpticatEpcService.wsdl" />
+    <None Include="Service References\Opticat\OpticatEpcService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Opticat\OpticatEpcService1.wsdl" />
+    <None Include="Service References\Opticat\OpticatEpcService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Opticat\OpticatEpcService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Opticat\OpticatEpcService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EPWI.Components\EPWI.Components.csproj">
+      <Project>{9da81ef2-4e58-4641-8c26-7e808fd7df1e}</Project>
+      <Name>EPWI.Components</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Opticat\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10628</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10628/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

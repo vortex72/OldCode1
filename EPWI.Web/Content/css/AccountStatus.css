@@ -1,0 +1,23 @@
+﻿.titlebar, th 
+{
+    background-color: #CCC;
+    font-weight:bold;
+}
+
+.headerbar
+{
+    background-color: #EEE;
+    font-weight:bold;
+}
+
+.lightborder, .lightborder td
+{
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+}
+
+.darkborder
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

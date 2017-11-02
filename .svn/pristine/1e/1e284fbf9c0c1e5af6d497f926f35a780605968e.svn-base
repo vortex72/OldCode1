@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Opticat3.net/WS/OpticatEpcService/" elementFormDefault="qualified" targetNamespace="http://Opticat3.net/WS/OpticatEpcService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/OpticatEpcService" />
+  <xs:element name="GetYears">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetYearsResult" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearsExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q2:Credentials" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="infilter" nillable="true" type="q3:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearsExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetYearsExtResult" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="yearID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetMakesResult" nillable="true" type="q5:ArrayOfAcesMake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakesExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q6:Credentials" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="infilter" nillable="true" type="q7:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMakesExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetMakesExtResult" nillable="true" type="q8:ArrayOfAcesMake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="yearID" type="xs:int" />
+        <xs:element minOccurs="0" name="makeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetModelsResult" nillable="true" type="q9:ArrayOfAcesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelsExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q10:Credentials" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="infilter" nillable="true" type="q11:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelsExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetModelsExtResult" nillable="true" type="q12:ArrayOfAcesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBaseVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="yearID" type="xs:int" />
+        <xs:element minOccurs="0" name="makeID" type="xs:int" />
+        <xs:element minOccurs="0" name="modelID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBaseVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetBaseVehicleResult" nillable="true" type="q13:AcesBaseVehicle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBaseVehicleExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q14:Credentials" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="infilter" nillable="true" type="q15:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBaseVehicleExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetBaseVehicleExtResult" nillable="true" type="q16:AcesBaseVehicle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubmodelsExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q17:Credentials" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q18:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubmodelsExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetSubmodelsExtResult" nillable="true" type="q19:ArrayOfAcesSubModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransmissionsByLegacyVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="legacyVehicleIDs" nillable="true" type="q20:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransmissionsByLegacyVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetTransmissionsByLegacyVehicleResult" nillable="true" type="q21:ArrayOfAcesTransmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehiclesByBaseVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehiclesByBaseVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetVehiclesByBaseVehicleResult" nillable="true" type="q22:ArrayOfAcesVehicle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehiclesByLegacyVehicle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="legacyVehicleIDs" nillable="true" type="q23:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehiclesByLegacyVehicleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetVehiclesByLegacyVehicleResult" nillable="true" type="q24:ArrayOfAcesVehicle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetCategoriesResult" nillable="true" type="q25:ArrayOfAcesCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q26:Credentials" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q27:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetCategoriesExtResult" nillable="true" type="q28:ArrayOfAcesCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="baseVehicleID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetSubCategoriesResult" nillable="true" type="q29:ArrayOfAcesSubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubCategoriesExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q30:Credentials" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q31:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubCategoriesExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetSubCategoriesExtResult" nillable="true" type="q32:ArrayOfAcesSubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="subCategoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="baseVehicleID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetPartTypesResult" nillable="true" type="q33:ArrayOfAcesPartType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartTypesExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q34:Credentials" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q35:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartTypesExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetPartTypesExtResult" nillable="true" type="q36:ArrayOfAcesPartType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionQualifiers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" type="xs:int" />
+        <xs:element minOccurs="0" name="partTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionQualifiersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetPositionQualifiersResult" nillable="true" type="q37:EpcPositionQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionsExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q38:Credentials" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q39:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionsExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetPositionsExtResult" nillable="true" type="q40:EpcPositionQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleQualifiers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" type="xs:int" />
+        <xs:element minOccurs="0" name="partTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="positionID" nillable="true" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleQualifiersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetVehicleQualifiersResult" nillable="true" type="q41:EpcVehicleQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleConfigQualifiers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" type="xs:int" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicleIDs" nillable="true" type="q42:ArrayOfint" />
+        <xs:element minOccurs="0" name="partTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="positionID" nillable="true" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleConfigQualifiersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetVehicleConfigQualifiersResult" nillable="true" type="q43:EpcVehicleConfigQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartApps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" type="xs:int" />
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicleIDs" nillable="true" type="q44:ArrayOfint" />
+        <xs:element xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicleConfigIDs" nillable="true" type="q45:ArrayOfint" />
+        <xs:element minOccurs="0" name="partTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="positionID" nillable="true" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartAppsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetPartAppsResult" nillable="true" type="q46:ArrayOfEpcPartApp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartAppsRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseVehicleID" type="xs:int" />
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicleIDs" nillable="true" type="q47:ArrayOfint" />
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vehicleConfigIDs" nillable="true" type="q48:ArrayOfint" />
+        <xs:element minOccurs="0" name="partTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="positionID" nillable="true" type="xs:short" />
+        <xs:element minOccurs="0" name="startNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartAppsRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetPartAppsRangeResult" nillable="true" type="q49:AcesPartAppsContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoRangeExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q50:Credentials" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q51:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoRangeExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductInfoRangeExtResult" nillable="true" type="q52:ProductInformationContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoBySKUExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q53:Credentials" />
+        <xs:element minOccurs="0" name="inSKU" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoBySKUExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductInfoBySKUExtResult" nillable="true" type="q54:ProductInformationContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoByBrandAAIAExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q55:Credentials" />
+        <xs:element minOccurs="0" name="brandAAIAID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductInfoByBrandAAIAExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductInfoByBrandAAIAExtResult" nillable="true" type="q56:ProductInformationContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q57:Credentials" />
+        <xs:element minOccurs="0" name="productId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductMetaInformationExtResult" nillable="true" type="q58:ArrayOfEpcPartAppMetaInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationByBrandAAIAExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q59:Credentials" />
+        <xs:element minOccurs="0" name="brandAAIAID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationByBrandAAIAExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductMetaInformationByBrandAAIAExtResult" nillable="true" type="q60:ArrayOfEpcPartAppMetaInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationByProductLineIDExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q61:Credentials" />
+        <xs:element minOccurs="0" name="ProductLineID" type="xs:int" />
+        <xs:element minOccurs="0" name="partNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationByProductLineIDExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductMetaInformationByProductLineIDExtResult" nillable="true" type="q62:ArrayOfEpcPartAppMetaInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationBySKUExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q63:Credentials" />
+        <xs:element minOccurs="0" name="inSKU" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductMetaInformationBySKUExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductMetaInformationBySKUExtResult" nillable="true" type="q64:ArrayOfEpcPartAppMetaInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImagesByPartNumberAndBrandAAIAID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q65:Credentials" />
+        <xs:element minOccurs="0" name="inPartNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inBrandAAIA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inBaseVehicleID" type="xs:int" />
+        <xs:element minOccurs="0" name="inPartTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImagesByPartNumberAndBrandAAIAIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetImagesByPartNumberAndBrandAAIAIDResult" nillable="true" type="q66:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuyersGuideByProductIDExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q67:Credentials" />
+        <xs:element minOccurs="0" name="inProductID" type="xs:int" />
+        <xs:element minOccurs="0" name="inPartTypeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuyersGuideByProductIDExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetBuyersGuideByProductIDExtResult" nillable="true" type="q68:ArrayOfBuyersGuideEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="Credentials" nillable="true" type="q69:Credentials" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="FilterInfo" nillable="true" type="q70:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVehicleLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetVehicleLookupExtResult" nillable="true" type="q71:ProductInformationContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductLinesContainingSubCategoryInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q72:Credentials" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inFilterInfo" nillable="true" type="q73:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductLinesContainingSubCategoryInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductLinesContainingSubCategoryInfoResult" nillable="true" type="q74:ArrayOfProductLineInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductLineInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="Credentials" nillable="true" type="q75:Credentials" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductLineInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetProductLineInformationResult" nillable="true" type="q76:ArrayOfProductLineInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnginesByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q77:Credentials" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q78:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnginesByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetEnginesByOpticatLookupExtResult" nillable="true" type="q79:ArrayOfAcesEngineConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrakesByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q80:Credentials" />
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q81:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrakesByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetBrakesByOpticatLookupExtResult" nillable="true" type="q82:ArrayOfAcesBrakeConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q83:Credentials" />
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q84:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetBedByOpticatLookupExtResult" nillable="true" type="q85:ArrayOfAcesBedConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriveTypeByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q86:Credentials" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q87:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDriveTypeByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetDriveTypeByOpticatLookupExtResult" nillable="true" type="q88:ArrayOfAcesDriveType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSteeringByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q89:Credentials" />
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q90:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSteeringByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetSteeringByOpticatLookupExtResult" nillable="true" type="q91:ArrayOfAcesSteeringConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpringTypeByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q92:Credentials" />
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q93:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpringTypeByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetSpringTypeByOpticatLookupExtResult" nillable="true" type="q94:ArrayOfAcesSpringTypeConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransmissionByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q95:Credentials" />
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q96:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransmissionByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetTransmissionByOpticatLookupExtResult" nillable="true" type="q97:ArrayOfAcesTransmission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWheelbaseByOpticatLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q98:Credentials" />
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q99:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWheelbaseByOpticatLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="GetWheelbaseByOpticatLookupExtResult" nillable="true" type="q100:ArrayOfAcesWheelbase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetPositionsExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q101:Credentials" />
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q102:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetPositionsExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="EPWI_GetPositionsExtResult" nillable="true" type="q103:EpcPositionQualifiers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetProductLinesContainingSubCategoryInfoExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q104:Credentials" />
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inFilterInfo" nillable="true" type="q105:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetProductLinesContainingSubCategoryInfoExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="EPWI_GetProductLinesContainingSubCategoryInfoExtResult" nillable="true" type="q106:ArrayOfProductLineInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetProductLinesContainingPartTypeInfoExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q107:Credentials" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inFilterInfo" nillable="true" type="q108:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetProductLinesContainingPartTypeInfoExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="EPWI_GetProductLinesContainingPartTypeInfoExtResult" nillable="true" type="q109:ArrayOfProductLineInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetVehicleLookupExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q110:Credentials" />
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inFilterInfo" nillable="true" type="q111:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetVehicleLookupExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="EPWI_GetVehicleLookupExtResult" nillable="true" type="q112:ProductInformationContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetPartTypesExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inCreds" nillable="true" type="q113:Credentials" />
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="inFilterInfo" nillable="true" type="q114:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetPartTypesExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="EPWI_GetPartTypesExtResult" nillable="true" type="q115:ArrayOfAcesPartType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetProductInfoRangeExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="credentials" nillable="true" type="q116:Credentials" />
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="filterInfo" nillable="true" type="q117:OpticatLookupFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EPWI_GetProductInfoRangeExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/OpticatEpcService" minOccurs="0" name="EPWI_GetProductInfoRangeExtResult" nillable="true" type="q118:ProductInformationContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

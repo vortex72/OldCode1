@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="EPWI.Components.Properties.Settings.EPWIConnectionString"
+            connectionString="Data Source=localhost;Initial Catalog=epwi2;Persist Security Info=True;User ID=kkrueger2;Password=n1ghtmar3"
+            providerName="System.Data.SqlClient" />
+        <add name="EPWI.Components.Properties.Settings.epwi2ConnectionString"
+            connectionString="Data Source=localhost;Initial Catalog=epwi2;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <system.serviceModel>
+        <bindings/>
+        <client/>
+    </system.serviceModel>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6"/></startup></configuration>

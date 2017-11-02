@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="80ca3298-6e9d-49ba-a26d-e6400952d042" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OpticatEpcService.xsd" MetadataType="Schema" ID="973077af-1b87-4185-8b11-8bd0e06d60fc" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OpticatEpcService1.xsd" MetadataType="Schema" ID="5e384d15-5685-4fb2-af55-087f18da9b2f" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OpticatEpcService.wsdl" MetadataType="Wsdl" ID="3ea0d263-6cf5-41db-81a6-064b54bcdf33" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="OpticatEpcService.disco" MetadataType="Disco" ID="c5d261d0-38d1-466a-bd33-66f321503a9d" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?disco" />
+    <MetadataFile FileName="OpticatEpcService2.xsd" MetadataType="Schema" ID="b5292ccf-1b1c-4fec-88ab-095456b79915" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OpticatEpcService3.xsd" MetadataType="Schema" ID="f37f6ce0-e6f5-424c-a494-428723eefa5c" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OpticatEpcService1.wsdl" MetadataType="Wsdl" ID="5f50ff16-ea10-4a15-9004-3bec34181b73" SourceId="1" SourceUrl="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

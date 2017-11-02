@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OpticatEpcService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OpticatEpcService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Credentials">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EncryptedPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Credentials" nillable="true" type="tns:Credentials" />
+  <xs:complexType name="OpticatLookupFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseVehicleID" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IncludeProductLineIDs" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="LookupRange" type="xs:int" />
+      <xs:element minOccurs="0" name="LookupStart" type="xs:int" />
+      <xs:element minOccurs="0" name="MakeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PartTypeIDList" nillable="true" type="q2:ArrayOfint" />
+      <xs:element minOccurs="0" name="PositionID" type="xs:int" />
+      <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedBedConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedBrakeConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedDriveTypeConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedEngineConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedSpringTypeConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedSteeringConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedTransmissionConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SelectedWheelbaseConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="SubCategoryID" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SubCategoryIDList" nillable="true" type="q3:ArrayOfint" />
+      <xs:element minOccurs="0" name="SubmodelID" type="xs:int" />
+      <xs:element minOccurs="0" name="YearID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpticatLookupFilter" nillable="true" type="tns:OpticatLookupFilter" />
+  <xs:complexType name="ArrayOfAcesMake">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesMake" nillable="true" type="tns:AcesMake" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesMake" nillable="true" type="tns:ArrayOfAcesMake" />
+  <xs:complexType name="AcesMake">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesMake" nillable="true" type="tns:AcesMake" />
+  <xs:complexType name="ArrayOfAcesModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesModel" nillable="true" type="tns:AcesModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesModel" nillable="true" type="tns:ArrayOfAcesModel" />
+  <xs:complexType name="AcesModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesModel" nillable="true" type="tns:AcesModel" />
+  <xs:complexType name="AcesBaseVehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Make" nillable="true" type="tns:AcesMake" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="tns:AcesModel" />
+      <xs:element minOccurs="0" name="YearID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBaseVehicle" nillable="true" type="tns:AcesBaseVehicle" />
+  <xs:complexType name="ArrayOfAcesSubModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesSubModel" nillable="true" type="tns:AcesSubModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesSubModel" nillable="true" type="tns:ArrayOfAcesSubModel" />
+  <xs:complexType name="AcesSubModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesSubModel" nillable="true" type="tns:AcesSubModel" />
+  <xs:complexType name="ArrayOfAcesTransmission">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesTransmission" nillable="true" type="tns:AcesTransmission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesTransmission" nillable="true" type="tns:ArrayOfAcesTransmission" />
+  <xs:complexType name="AcesTransmission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesTransmissionDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesTransmission" nillable="true" type="tns:AcesTransmission" />
+  <xs:complexType name="AcesTransmissionDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ControlType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElecControlled" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfrCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumSpeeds" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesTransmissionDetails" nillable="true" type="tns:AcesTransmissionDetails" />
+  <xs:complexType name="ArrayOfAcesVehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesVehicle" nillable="true" type="tns:AcesVehicle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesVehicle" nillable="true" type="tns:ArrayOfAcesVehicle" />
+  <xs:complexType name="AcesVehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseVehicle" nillable="true" type="tns:AcesBaseVehicle" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="tns:AcesRegion" />
+      <xs:element minOccurs="0" name="SubModel" nillable="true" type="tns:AcesSubModel" />
+      <xs:element minOccurs="0" name="VehicleID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesVehicle" nillable="true" type="tns:AcesVehicle" />
+  <xs:complexType name="AcesRegion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesRegion" nillable="true" type="tns:AcesRegion" />
+  <xs:complexType name="ArrayOfAcesCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesCategory" nillable="true" type="tns:AcesCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesCategory" nillable="true" type="tns:ArrayOfAcesCategory" />
+  <xs:complexType name="AcesCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesCategory" nillable="true" type="tns:AcesCategory" />
+  <xs:complexType name="ArrayOfAcesSubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesSubCategory" nillable="true" type="tns:AcesSubCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesSubCategory" nillable="true" type="tns:ArrayOfAcesSubCategory" />
+  <xs:complexType name="AcesSubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesSubCategory" nillable="true" type="tns:AcesSubCategory" />
+  <xs:complexType name="ArrayOfAcesPartType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesPartType" nillable="true" type="tns:AcesPartType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesPartType" nillable="true" type="tns:ArrayOfAcesPartType" />
+  <xs:complexType name="AcesPartType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesPartType" nillable="true" type="tns:AcesPartType" />
+  <xs:complexType name="EpcPositionQualifiers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AskPosition" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayPosition" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="QualifyingPositions" nillable="true" type="tns:ArrayOfAcesPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPositionQualifiers" nillable="true" type="tns:EpcPositionQualifiers" />
+  <xs:complexType name="ArrayOfAcesPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesPosition" nillable="true" type="tns:AcesPosition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesPosition" nillable="true" type="tns:ArrayOfAcesPosition" />
+  <xs:complexType name="AcesPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesPosition" nillable="true" type="tns:AcesPosition" />
+  <xs:complexType name="EpcVehicleQualifiers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AskRegion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskSubModel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayRegion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplaySubModel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="QualifyingVehicles" nillable="true" type="tns:ArrayOfAcesVehicle" />
+      <xs:element minOccurs="0" name="TotalRegions" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalSubModels" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcVehicleQualifiers" nillable="true" type="tns:EpcVehicleQualifiers" />
+  <xs:complexType name="EpcVehicleConfigQualifiers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AskBedConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskBodyStyleConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskBrakeConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskDriveType" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskEngineConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskMfrBodyCode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskSpringTypeConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskSteeringConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskTransmission" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AskWheelbase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayBedConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayBodyStyleConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayBrakeConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayDriveType" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayEngineConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayMfrBodyCode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplaySpringTypeConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplaySteeringConfig" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayTransmission" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayWheelbase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="QualifyingVehicleConfigs" nillable="true" type="tns:ArrayOfAcesVehicleConfig" />
+      <xs:element minOccurs="0" name="TotalBedConfigs" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalBodyStyleConfigs" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalBrakeConfigs" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalDriveTypes" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalEngineConfigs" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalMfrBodyCodes" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalSpringTypeConfigs" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalSteeringConfigs" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalTransmissions" type="xs:short" />
+      <xs:element minOccurs="0" name="TotalWheelbases" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcVehicleConfigQualifiers" nillable="true" type="tns:EpcVehicleConfigQualifiers" />
+  <xs:complexType name="ArrayOfAcesVehicleConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesVehicleConfig" nillable="true" type="tns:AcesVehicleConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesVehicleConfig" nillable="true" type="tns:ArrayOfAcesVehicleConfig" />
+  <xs:complexType name="AcesVehicleConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BedConfig" nillable="true" type="tns:AcesBedConfig" />
+      <xs:element minOccurs="0" name="BodyStyleConfig" nillable="true" type="tns:AcesBodyStyleConfig" />
+      <xs:element minOccurs="0" name="BrakeConfig" nillable="true" type="tns:AcesBrakeConfig" />
+      <xs:element minOccurs="0" name="DriveType" nillable="true" type="tns:AcesDriveType" />
+      <xs:element minOccurs="0" name="EngineConfig" nillable="true" type="tns:AcesEngineConfig" />
+      <xs:element minOccurs="0" name="MfrBodyCode" nillable="true" type="tns:AcesMfrBodyCode" />
+      <xs:element minOccurs="0" name="SpringTypeConfig" nillable="true" type="tns:AcesSpringTypeConfig" />
+      <xs:element minOccurs="0" name="SteeringConfig" nillable="true" type="tns:AcesSteeringConfig" />
+      <xs:element minOccurs="0" name="Transmission" nillable="true" type="tns:AcesTransmission" />
+      <xs:element minOccurs="0" name="VehicleConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="VehicleID" type="xs:int" />
+      <xs:element minOccurs="0" name="Wheelbase" nillable="true" type="tns:AcesWheelbase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesVehicleConfig" nillable="true" type="tns:AcesVehicleConfig" />
+  <xs:complexType name="AcesBedConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesBedConfigDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBedConfig" nillable="true" type="tns:AcesBedConfig" />
+  <xs:complexType name="AcesBedConfigDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BedLengthInches" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BedLengthMetric" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BedTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBedConfigDetails" nillable="true" type="tns:AcesBedConfigDetails" />
+  <xs:complexType name="AcesBodyStyleConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesBodyStyleConfigDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBodyStyleConfig" nillable="true" type="tns:AcesBodyStyleConfig" />
+  <xs:complexType name="AcesBodyStyleConfigDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BodyNumDoors" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BodyType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBodyStyleConfigDetails" nillable="true" type="tns:AcesBodyStyleConfigDetails" />
+  <xs:complexType name="AcesBrakeConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesBrakeConfigDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBrakeConfig" nillable="true" type="tns:AcesBrakeConfig" />
+  <xs:complexType name="AcesBrakeConfigDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrakeABS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrakeSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FrontBrakeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RearBrakeType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesBrakeConfigDetails" nillable="true" type="tns:AcesBrakeConfigDetails" />
+  <xs:complexType name="AcesDriveType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesDriveType" nillable="true" type="tns:AcesDriveType" />
+  <xs:complexType name="AcesEngineConfig">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AppConfigEngines" nillable="true" type="q4:ArrayOfint" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesEngineConfigDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesEngineConfig" nillable="true" type="tns:AcesEngineConfig" />
+  <xs:complexType name="AcesEngineConfigDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aspiration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CylinderHeadType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineBlockType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineBoreInches" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineBoreMetric" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineCID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineCylinders" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineDesignation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineLiter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineMfrName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineStrokeInches" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineStrokeMetric" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineVIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EngineVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelDeliverySubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelDeliveryType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelSystemControlType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelSystemDesign" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FuelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HorsePower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IgnitionSystemType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KilowattPower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValvesPerEngine" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesEngineConfigDetails" nillable="true" type="tns:AcesEngineConfigDetails" />
+  <xs:complexType name="AcesMfrBodyCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesMfrBodyCode" nillable="true" type="tns:AcesMfrBodyCode" />
+  <xs:complexType name="AcesSpringTypeConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesSpringTypeConfigDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesSpringTypeConfig" nillable="true" type="tns:AcesSpringTypeConfig" />
+  <xs:complexType name="AcesSpringTypeConfigDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrontSpringType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RearSpringType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesSpringTypeConfigDetails" nillable="true" type="tns:AcesSpringTypeConfigDetails" />
+  <xs:complexType name="AcesSteeringConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesSteeringConfigDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesSteeringConfig" nillable="true" type="tns:AcesSteeringConfig" />
+  <xs:complexType name="AcesSteeringConfigDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SteeringSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SteeringType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesSteeringConfigDetails" nillable="true" type="tns:AcesSteeringConfigDetails" />
+  <xs:complexType name="AcesWheelbase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:AcesWheelbaseDetails" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesWheelbase" nillable="true" type="tns:AcesWheelbase" />
+  <xs:complexType name="AcesWheelbaseDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Inches" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Metric" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesWheelbaseDetails" nillable="true" type="tns:AcesWheelbaseDetails" />
+  <xs:complexType name="ArrayOfEpcPartApp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcPartApp" nillable="true" type="tns:EpcPartApp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcPartApp" nillable="true" type="tns:ArrayOfEpcPartApp" />
+  <xs:complexType name="EpcPartApp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AAIABrandID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayOrder" type="xs:unsignedByte" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageURI" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsLegacyApp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PVAppID" type="xs:int" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PerCarQty" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PositionID" type="xs:short" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductLineID" type="xs:short" />
+      <xs:element minOccurs="0" name="ProductLineMfrCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductLineName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="VehicleID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPartApp" nillable="true" type="tns:EpcPartApp" />
+  <xs:complexType name="AcesPartAppsContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcesParts" nillable="true" type="tns:ArrayOfEpcPartApp" />
+      <xs:element minOccurs="0" name="AcesPartsWithInformation" nillable="true" type="tns:ArrayOfEpcPartAppMetaInformation" />
+      <xs:element minOccurs="0" name="AcesProducts" nillable="true" type="tns:ArrayOfEpcProduct" />
+      <xs:element minOccurs="0" name="Range" type="xs:int" />
+      <xs:element minOccurs="0" name="Start" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcesPartAppsContainer" nillable="true" type="tns:AcesPartAppsContainer" />
+  <xs:complexType name="ArrayOfEpcPartAppMetaInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcPartAppMetaInformation" nillable="true" type="tns:EpcPartAppMetaInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcPartAppMetaInformation" nillable="true" type="tns:ArrayOfEpcPartAppMetaInformation" />
+  <xs:complexType name="EpcPartAppMetaInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandAAIAID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtendedInformation" nillable="true" type="tns:EpcPartAppExtendedInformation" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageURI" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsValidProductID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketingHeading" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingSubHeading" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingURI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfrLogoURI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinimumOrderQuantity" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="MinimumOrderQuantityUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageHazmatInformation" nillable="true" type="tns:ArrayOfEpcPackageHazmatInformation" />
+      <xs:element minOccurs="0" name="PackageInformation" nillable="true" type="tns:ArrayOfEpcPackageInformation" />
+      <xs:element minOccurs="0" name="PartDescriptions" nillable="true" type="tns:EpcPartDescriptions" />
+      <xs:element minOccurs="0" name="PartInterchangeInformation" nillable="true" type="tns:ArrayOfEpcPartInterchangeInformation" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceInformation" nillable="true" type="tns:EpcPriceInformation" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductFileID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductSubGroupCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecificationsURI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarrantyURI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPartAppMetaInformation" nillable="true" type="tns:EpcPartAppMetaInformation" />
+  <xs:complexType name="EpcPartAppExtendedInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryOfOrigin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmissionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HarmonizedTariffCodeHTS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasApplications" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDiscontinued" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsHazardousMaterial" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMSDSRequired" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsNew" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRemanufactured" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSuspended" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTaxable" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LifeCycleStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MSDSSheetNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MSDSURI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaximumCasesPerPalletLayer" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="NewPart" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OldPart" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PalletLayerMaximum" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="PopularityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StockStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarrantyMonths" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="WarranyMiles" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPartAppExtendedInformation" nillable="true" type="tns:EpcPartAppExtendedInformation" />
+  <xs:complexType name="ArrayOfEpcPackageHazmatInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcPackageHazmatInformation" nillable="true" type="tns:EpcPackageHazmatInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcPackageHazmatInformation" nillable="true" type="tns:ArrayOfEpcPackageHazmatInformation" />
+  <xs:complexType name="EpcPackageHazmatInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeQualifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HazardousClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBulk" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDomesticShipping" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRegulated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaintenanceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageID" type="xs:long" />
+      <xs:element minOccurs="0" name="RegulatingCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportMethod" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPackageHazmatInformation" nillable="true" type="tns:EpcPackageHazmatInformation" />
+  <xs:complexType name="ArrayOfEpcPackageInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcPackageInformation" nillable="true" type="tns:EpcPackageInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcPackageInformation" nillable="true" type="tns:ArrayOfEpcPackageInformation" />
+  <xs:complexType name="EpcPackageInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BarCodeCharacters" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DimensionalWeight" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DimensionsUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EachesQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="GTIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Length" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="OrderablePackage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="WeightUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WeightVariance" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPackageInformation" nillable="true" type="tns:EpcPackageInformation" />
+  <xs:complexType name="EpcPartDescriptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbbreviatedDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssociatedComments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeySearchWords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabelDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LifeCycleStatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SlangDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNSPSCDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VMRSDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarrantyTypeDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPartDescriptions" nillable="true" type="tns:EpcPartDescriptions" />
+  <xs:complexType name="ArrayOfEpcPartInterchangeInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcPartInterchangeInformation" nillable="true" type="tns:EpcPartInterchangeInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcPartInterchangeInformation" nillable="true" type="tns:ArrayOfEpcPartInterchangeInformation" />
+  <xs:complexType name="EpcPartInterchangeInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandAAIAID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivateNotes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="QualityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPartInterchangeInformation" nillable="true" type="tns:EpcPartInterchangeInformation" />
+  <xs:complexType name="EpcPriceInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="PriceSheetNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UOM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcPriceInformation" nillable="true" type="tns:EpcPriceInformation" />
+  <xs:complexType name="ArrayOfEpcProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcProduct" nillable="true" type="tns:EpcProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcProduct" nillable="true" type="tns:ArrayOfEpcProduct" />
+  <xs:complexType name="EpcProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AAIABrandID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageURI" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PVAppID" type="xs:int" />
+      <xs:element minOccurs="0" name="PartKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PerCarQty" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PositionID" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductLineID" type="xs:short" />
+      <xs:element minOccurs="0" name="ProductLineMfrCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductLineName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="VehicleConfigID" nillable="true" type="q10:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcProduct" nillable="true" type="tns:EpcProduct" />
+  <xs:complexType name="ProductInformationContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcesProducts" nillable="true" type="tns:ArrayOfEpcProductExt" />
+      <xs:element minOccurs="0" name="Range" type="xs:int" />
+      <xs:element minOccurs="0" name="Start" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductInformationContainer" nillable="true" type="tns:ProductInformationContainer" />
+  <xs:complexType name="ArrayOfEpcProductExt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EpcProductExt" nillable="true" type="tns:EpcProductExt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEpcProductExt" nillable="true" type="tns:ArrayOfEpcProductExt" />
+  <xs:complexType name="EpcProductExt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AAIABrandID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConfigID" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EngineDescriptions" nillable="true" type="q11:ArrayOfstring" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageURI" nillable="true" type="q12:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PerCarQty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductLineID" type="xs:short" />
+      <xs:element minOccurs="0" name="ProductLineMfrCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductLineName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EpcProductExt" nillable="true" type="tns:EpcProductExt" />
+  <xs:complexType name="ArrayOfBuyersGuideEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BuyersGuideEntry" nillable="true" type="tns:BuyersGuideEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBuyersGuideEntry" nillable="true" type="tns:ArrayOfBuyersGuideEntry" />
+  <xs:complexType name="BuyersGuideEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndYear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MakeID" type="xs:int" />
+      <xs:element minOccurs="0" name="MakeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartYear" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BuyersGuideEntry" nillable="true" type="tns:BuyersGuideEntry" />
+  <xs:complexType name="ArrayOfProductLineInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductLineInformation" nillable="true" type="tns:ProductLineInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductLineInformation" nillable="true" type="tns:ArrayOfProductLineInformation" />
+  <xs:complexType name="ProductLineInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandAAIAID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductLineID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductLineName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductLineInformation" nillable="true" type="tns:ProductLineInformation" />
+  <xs:complexType name="ArrayOfAcesEngineConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesEngineConfig" nillable="true" type="tns:AcesEngineConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesEngineConfig" nillable="true" type="tns:ArrayOfAcesEngineConfig" />
+  <xs:complexType name="ArrayOfAcesBrakeConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesBrakeConfig" nillable="true" type="tns:AcesBrakeConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesBrakeConfig" nillable="true" type="tns:ArrayOfAcesBrakeConfig" />
+  <xs:complexType name="ArrayOfAcesBedConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesBedConfig" nillable="true" type="tns:AcesBedConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesBedConfig" nillable="true" type="tns:ArrayOfAcesBedConfig" />
+  <xs:complexType name="ArrayOfAcesDriveType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesDriveType" nillable="true" type="tns:AcesDriveType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesDriveType" nillable="true" type="tns:ArrayOfAcesDriveType" />
+  <xs:complexType name="ArrayOfAcesSteeringConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesSteeringConfig" nillable="true" type="tns:AcesSteeringConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesSteeringConfig" nillable="true" type="tns:ArrayOfAcesSteeringConfig" />
+  <xs:complexType name="ArrayOfAcesSpringTypeConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesSpringTypeConfig" nillable="true" type="tns:AcesSpringTypeConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesSpringTypeConfig" nillable="true" type="tns:ArrayOfAcesSpringTypeConfig" />
+  <xs:complexType name="ArrayOfAcesWheelbase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AcesWheelbase" nillable="true" type="tns:AcesWheelbase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcesWheelbase" nillable="true" type="tns:ArrayOfAcesWheelbase" />
+</xs:schema>

@@ -1,0 +1,76 @@
+﻿/* Stock Status */
+#stockStatusPrices td{ border-bottom: solid 1px #CCCCCC;} 
+
+/* Bold the pricing column in stock status prices */
+/* See this site for reference: http://css-discuss.incutio.com/?page=StylingColumns */
+#stockStatusPrices td:first-child + td { font-weight: bold; text-align: right;} /* for IE */
+
+#stockStatusInformation td:first-child { width: 200px; } /* for IE */
+#stockStatusInformation td:first-child + td { font-weight: bold; } /* for IE */
+
+.stockStatusBlock, .InterchangeStockStatus {
+	border: solid 1px black;
+	margin-right:5px;
+	float:left;
+}
+
+.InterchangeOrderOptions
+{
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    margin-right:5px;
+    float:left;   
+}
+
+.stockStatusBlock td:first-child {
+	width:1%;
+	padding-right:5px;
+}
+
+.stockStatusPricing td:first-child 
+{
+    text-align:right;
+    white-space:nowrap;   
+}
+.stockStatusBlock td:first-child + td {
+	width:99%;
+	font-weight:bold;
+}
+.stockStatusBlock td, .InterchangeStockStatus td, .InterchangeOrderOptions td {
+	border-bottom: solid 1px #CCCCCC;
+	padding:2px;
+	vertical-align:top;
+}
+
+.stockStatusBlock th {
+	border-bottom: solid 1px #000;
+	padding:2px;
+	background-color:#CCC;
+}
+#stockStatusContainer td {vertical-align:top; padding:5px;}
+#stockStatusInformation {width: 400px;}
+#stockStatusPricing td:first-child + td { text-align:right;}
+#stockStatusWarehouses {margin-top: 10px;}
+#stockStatusWarehouses td{text-align:center; font-weight:bold;}
+#orderOverview td {border-bottom: solid 1px #CCCCCC;}
+#orderOverview td:first-child + td {text-align:right;}
+.orderOverviewTotal { border-top:solid 1px black; font-weight:bold; }
+
+.stockStatusMessageNote{
+	font-style:italic;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+input.OrderButton
+{
+    /*width:390px;*/
+    /*font-size:7pt; */
+}
+
+div#ProductImage
+{
+    margin:0;
+    padding:0;
+}

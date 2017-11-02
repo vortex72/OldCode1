@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://Opticat3.net/WS/OpticatEpcService/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OpticatEpcService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://Opticat3.net/WS/OpticatEpcService/" location="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IOpticatEpcService" type="i0:IOpticatEpcService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetYears">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetYears" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearsExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetYearsExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakes">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetMakes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMakesExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetMakesExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModels">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetModels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelsExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetModelsExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseVehicle">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBaseVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseVehicleExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBaseVehicleExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubmodelsExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubmodelsExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransmissionsByLegacyVehicle">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetTransmissionsByLegacyVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByBaseVehicle">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehiclesByBaseVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByLegacyVehicle">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehiclesByLegacyVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetCategoriesExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategories">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoriesExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSubCategoriesExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartTypes">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartTypesExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartTypesExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionQualifiers">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPositionQualifiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionsExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPositionsExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleQualifiers">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleQualifiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleConfigQualifiers">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleConfigQualifiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartApps">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartApps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartAppsRange">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetPartAppsRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoRangeExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoRangeExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoBySKUExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoBySKUExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductInfoByBrandAAIAExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductInfoByBrandAAIAExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationByBrandAAIAExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationByBrandAAIAExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationByProductLineIDExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationByProductLineIDExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductMetaInformationBySKUExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductMetaInformationBySKUExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImagesByPartNumberAndBrandAAIAID">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetImagesByPartNumberAndBrandAAIAID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyersGuideByProductIDExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBuyersGuideByProductIDExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehicleLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetVehicleLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLinesContainingSubCategoryInfo">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductLinesContainingSubCategoryInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLineInformation">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetProductLineInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnginesByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetEnginesByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrakesByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBrakesByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBedByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetBedByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDriveTypeByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetDriveTypeByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSteeringByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSteeringByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpringTypeByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetSpringTypeByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransmissionByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetTransmissionByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWheelbaseByOpticatLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/GetWheelbaseByOpticatLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetPositionsExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetPositionsExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetProductLinesContainingSubCategoryInfoExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductLinesContainingSubCategoryInfoExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetProductLinesContainingPartTypeInfoExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductLinesContainingPartTypeInfoExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetVehicleLookupExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetVehicleLookupExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetPartTypesExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetPartTypesExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EPWI_GetProductInfoRangeExt">
+      <soap:operation soapAction="http://Opticat3.net/WS/OpticatEpcService/IOpticatEpcService/EPWI_GetProductInfoRangeExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OpticatEpcService">
+    <wsdl:port name="BasicHttpBinding_IOpticatEpcService" binding="tns:BasicHttpBinding_IOpticatEpcService">
+      <soap:address location="http://63.123.154.203/WS/OpticatEpcServiceDevelopment/OpticatEpcService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

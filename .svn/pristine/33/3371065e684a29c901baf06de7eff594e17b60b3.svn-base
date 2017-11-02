@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server"/>
+    </title>
+    <asp:ContentPlaceHolder ID="FirstScriptContent" runat="server"/>
+    <% Html.RenderPartial("HeaderCDN"); %>
+
+    <link href="<%= Url.Content("~/Content/css/ie6.css") %>" rel="stylesheet"/>
+    <link href="<%= Url.Content("~/Content/css/epwi.css") %>" rel="stylesheet"/>
+    <link href="<%= Url.Content("~/Content/css/AccountStatus.css") %>" rel="stylesheet"/>
+    <link href="<%= Url.Content("~/Content/css/print.css") %>" media="print" rel="stylesheet"/>
+
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-3.0.0.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js") %>"></script>
+
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-migrate-1.2.1.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"></script>
+
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui-1.12.0-rc.2.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/modernizr-2.8.3.js") %>"></script>
+
+    <link rel="Stylesheet" type="text/css" href="<%= Url.Content("~/Content/css/superfish.css") %>"/>
+    <link rel="Stylesheet" type="text/css" href="<%= Url.Content("~/Content/css/Smoothness/jquery-ui-1.12.0-rc.2.css") %>"/>
+    <link rel="Stylesheet" type="text/css" href="<%= Url.Content("~/Content/css/YUIPaginatorDatatable.css") %>"/>
+
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/site/amplify.core.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/site/amplify.store.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/site/xVal.jquery.validate.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/knockout-3.4.0.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Scripts/site/columnizeList.js") %>"></script>
+
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="backgroundOverlay">
+    <div class="mainWrapper">
+        <div class="mainColumn">
+            <% Html.RenderPartial("IE6Warning"); %>
+            <div class="mainContainer" id="header">
+                <img src="<% = Url.Content("~/Content/images/header.gif") %>" width="750" height="120" alt="EPWI"/>
+                <div class="menubar"><% Html.RenderAction("Menu", "Home"); %></div>
+            </div>
+            <div id="main" class="mainContainer">
+                <div class="upperRightCorner"></div>
+                <img src="<% = Url.Content("~/Content/images/homepage.jpg") %>" alt="EPWI home"/>
+                <span class="homePageFooter"><% Html.RenderPartial("Footer"); %></span>
+            </div>
+
+        </div>
+        <!-- end main column -->
+        <div class="sideColumnWrapper">
+            <div class="sideColumn">
+                <% Html.RenderAction("SlideShow", "SlideShow"); %>
+                <asp:ContentPlaceHolder ID="SideBarContent" runat="server"/>
+                <% if (Page.User.Identity.IsAuthenticated)
+                   { %>
+                    <% if (!(Model is OrderViewModel))
+                       { %>
+                        <div id="OrderWidget">
+                            <% Html.RenderAction("OrderWidget", "Order"); %>
+                        </div>
+                    <% } %>
+                    <% if (!(Model is StockStatusViewModel))
+                       { %>
+                        <% Html.RenderPartial("SearchWidget"); %>
+                    <% } %>
+                    <% if (Page.User.IsInRole("LOOKUP"))
+                       { %>
+                        <% Html.RenderPartial("LookupWidget"); %>
+                    <% } %>
+                <% } %>
+                <% if (Page.User.Identity.IsAuthenticated && Page.User.IsInRole("EMPLOYEE"))
+                   { %>
+                    <% Html.RenderAction("CustomerInfo", "Account"); %>
+                    <% Html.RenderPartial("ViewInvoice"); %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ProcessingBlock" id="divProcessingBlock">
+    <div class="ajaxIndicator">
+        <img src="<% = Url.Content("~/Content/images/ajax-loader.gif") %>"/>
+    </div>
+</div>
+<input type="hidden" value="<%= Url.Content("~") %>" id="siteBaseUrl"/>
+
+<script type="text/javascript" src="<%= Url.Content("~/Scripts/site/global.js") %>"></script>
+<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-migrate-1.2.1.min.js") %>"></script>
+
+<script type="text/javascript" src="<%= Url.Content("~/Scripts/superfish_supersubs.js") %>"></script>
+<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery.cycle.lite.1.0.min.js") %>"></script>
+<%--<script type="text/javascript" src="<%= Url.Content("~/Scripts/jquery-ui-1.7.2.custom.min.js") %>"></script>--%>
+<script src="<% = Url.Content("~/Scripts/jquery-ui-1.12.0-rc.2.js") %>" type="text/javascript"></script>
+
+<% Html.RenderPartial("FooterCDN"); %>
+<% Html.RenderPartial("GoogleAnalytics"); %>
+</body>
+</html>
